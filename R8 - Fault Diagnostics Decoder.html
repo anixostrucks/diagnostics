@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<title> Xos Diagnostics </title>
+
+<style>
+body{
+  background-color:#bbe0fa;
+  margin-right:50px;
+  margin-left:50px;
+}
+h1{
+	font-family:calibri;
+	font-weight:bold;
+	border-radius: 4px;
+	font-size: 30px;
+	
+}
+h3{
+	font-family:calibri;
+	background-color:white;
+	border-radius: 4px;
+	text-align:center;
+	font-size: 20px;
+	font-weight:bold;
+}
+.row{
+  background-color: #bbe0fa; /90AFC5/
+  border:10px;
+  padding:10px;
+}
+
+p{
+  background-color: white;
+  text-align:center;
+  font-size:18px;
+  font-family:Calibri;
+  border-radius: 4px;
+  
+}
+label{
+	width: 190px;    
+    text-align:left;
+	font-weight:bold;
+	font-size:18px;
+	font-family:Calibri;
+	margin:2px;
+}
+button{
+background-color: #485863; /* Green336B87 */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+input{
+	width:50%;
+	margin:2px;
+	border-radius: 4px;
+	border:2px solid white;
+}
+select{
+	width:70%;
+	margin:2px;
+	border-radius: 4px;
+	border:2px solid white;
+	text-align:right;
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+<h1 style="text-align:center"> Xos Troubleshooting Guide</h1>
+</div>
+<div class="row">
+<div class="col-sm-5">
+<label for="vehicle">Select Vehicle Type</label>
+<select name="vehicle" id="vehicle">
+  <option value="R8">R8</option>
+  <option value="Amazon - RM01_M580_R5_21">Amazon - RM01_M580_R5_21</option>
+  <option value="Amazon - RM01_M580_R6_12">Amazon - RM01_M580_R6_12</option>
+  <option value="Amazon - RM01_M580_R7_16">Amazon - RM01_M580_R7_16</option>
+  <option value="Loomis - SV01_X13a_Prebuilt_40">Loomis - SV01_X13a_Prebuilt_40</option>
+</select>
+</div>
+
+<div class="col-sm-7">
+<!--<p id="vehicleSelect"></p>-->
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-4 " >
+		<h3> VCU Diagnostics </h3><br>
+		<div class="form-group">
+			<label for="Frame1"> DEM Freeze Frame 1 </label>
+			<input type="number" id="Frame1" min="0" max="4294967295">
+			<br>
+			<label for="Frame2"> DEM Freeze Frame 2 </label>
+			<input type="number" id="Frame2" min="0" max="4294967295">
+			<br>
+			<label for="Frame3"> DEM Freeze Frame 3 </label>
+			<input type="number" id="Frame3" min="0" max="4294967295">
+			<br>
+			<label for="Frame4"> DEM Freeze Frame 4 </label>
+			<input type="number" id="Frame4" min="0" max="4294967295">
+			<br>
+			<label for="Frame5"> DEM Freeze Frame 5 </label>
+			<input type="number" id="Frame5" min="0" max="4294967295">
+			<br>
+			<label for="Frame6"> DEM Freeze Frame 6 </label>
+			<input type="number" id="Frame6" min="0" max="4294967295">
+			<br>
+			<label for="Frame7"> DEM Freeze Frame 7 </label>
+			<input type="number" id="Frame7" min="0" max="4294967295">
+			<br>
+			<label for="Frame8"> DEM Freeze Frame 8 </label>
+			<input type="number" id="Frame8" min="0" max="4294967295">
+			<br>
+			<br>
+
+			<!--<button class="button = button" id="reload" >Reload</button>-->
+			<br>
+		</div>
+		<br>
+		<p  id="para1"> </p>
+		<p  id="para2"> </p>
+		<p  id="para3"> </p>
+		<p  id="para4"> </p>
+		<p  id="para5"> </p>
+		<p  id="para6"> </p>
+		<p  id="para7"> </p>
+		<p  id="para8"> </p>
+	</div>
+
+
+<div class="col-sm-4">
+      <h3>Component Diagnostics I</h3>
+	  <br>
+
+	<div class="form-group">
+	  <label for="Battery1Flt"> Battery1 Fault Code </label>
+	  <input type="number" id="Frame9">
+	  <br>
+	  <label for="Battery2Flt"> Battery2 Fault Code </label>
+	  <input type="number" id="Frame10">
+	  <br>
+	  <label for="Battery3Flt"> Battery3 Fault Code </label>
+	  <input type="number" id="Frame11">
+	  <br>
+	  <label for="Battery4Flt"> Battery4 Fault Code </label>
+	  <input type="number" id="Frame12">
+	  <br>
+	  <label for="Battery5Flt"> Battery5 Fault Code </label>
+	  <input type="number" id="Frame13">
+	  <br>
+	  <p id="para9">  </p>
+	  <p id="para10">  </p>
+	  <p id="para11"> </p>
+	  <p id="para12">  </p>
+	  <p id="para13"> </p>
+    </div>
+<p></p>
+</div>
+
+<div class="col-sm-4">
+	<h3>Component Diagnostics II</h3>
+	<br>
+	<div class="form-group">
+		<label for="DCDC1Flt"> DCDC1 Fault Code </label>
+		<input type="number" id="Frame14">
+		<br>
+		<label for="DCDC2Flt"> DCDC2 Fault Code </label>
+		<input type="number" id="Frame15">
+		<br>
+		<label for="DCDC3Flt"> DCDC3 Fault Code </label>
+		<input type="number" id="Frame16">
+		<br>
+		<label for="Charger1Flt"> Charger1 Fault Code </label>
+		<input type="number" id="Frame17">
+		<br>
+		<label for="harger2Flt"> Charger2 Fault Code </label>
+		<input type="number" id="Frame18">
+		<br>
+		<label for="CabHeaterFlt"> Cab Heater Fault Code </label>
+		<input type="number" id="Frame19">
+		<br>
+		<label for="MotorPmpFlt"> Motor Pump Fault Code </label>
+		<input type="number" id="Frame20">
+		<br>
+		<label for="ElecPmpFlt"> Elec Pump Fault Code </label>
+		<input type="number" id="Frame21">
+		<br>
+		<label for="MCUFaultCode"> Motor Fault Code </label>
+		<input type="number" id="Frame22">
+		<br>
+		<p id="para14">  </p>
+		<p id="para15">  </p>
+		<p id="para16">  </p>
+		<p id="para17"> </p>
+		<p id="para18">  </p>
+		<p id="para19"> </p>
+		<p id="para20">  </p>
+		<p id="para21">  </p>
+		<p id="para22">  </p>
+	</div>
+    <p></p>
+</div>
+
+<div class="col-sm-4">
+	<h3>Charging Diagnostics</h3>
+	<br>
+	<div class="form-group">
+		<label for="CCS STM State"> CCS STM St. </label>
+		<input type="number" id="Frame23">
+		<br>
+		<label for="CCS STM Info"> CCS STM Info </label>
+		<input type="number" id="Frame24">
+		<br>
+		<label for="CP State"> CP State </label>
+		<input type="number" id="Frame25">
+		<br>
+		<label for="PP State"> PP State </label>
+		<input type="number" id="Frame26">
+		<br><br>
+
+		<p id="para23"> </p>
+		<p id="para24"> </p>
+		<p id="para25"> </p>
+		<p id="para26"> </p>
+	</div>
+    <p></p>
+</div>
+
+	<div class="row">
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
+		<div  class="text-center">
+		<button class="button = button" id="submit" >Submit</button>
+		<button class="button = button" id="clear" >Reset All</button>
+		</div>
+	</div>
+	<div class="col-sm-4"></div>
+	</div>
+</div>
+</div>
+
+<script>
+document.getElementById("vehicle").addEventListener("change",updateVehSelect);
+document.getElementById("Frame1").addEventListener("change",myFunction); 
+document.getElementById("Frame2").addEventListener("change",myFunction); 
+document.getElementById("Frame3").addEventListener("change",myFunction); 
+document.getElementById("Frame4").addEventListener("change",myFunction); 
+document.getElementById("Frame5").addEventListener("change",myFunction); 
+document.getElementById("Frame6").addEventListener("change",myFunction);
+document.getElementById("Frame7").addEventListener("change",myFunction); 
+document.getElementById("Frame8").addEventListener("change",myFunction); 
+document.getElementById("Frame9").addEventListener("change",myFunction); 
+document.getElementById("Frame10").addEventListener("change",myFunction); 
+document.getElementById("Frame11").addEventListener("change",myFunction); 
+document.getElementById("Frame12").addEventListener("change",myFunction); 
+document.getElementById("Frame13").addEventListener("change",myFunction); 
+document.getElementById("Frame14").addEventListener("change",myFunction); 
+document.getElementById("Frame15").addEventListener("change",myFunction); 
+document.getElementById("Frame16").addEventListener("change",myFunction); 
+document.getElementById("Frame17").addEventListener("change",myFunction); 
+document.getElementById("Frame18").addEventListener("change",myFunction); 
+document.getElementById("Frame19").addEventListener("change",myFunction); 
+document.getElementById("Frame20").addEventListener("change",myFunction); 
+document.getElementById("Frame21").addEventListener("change",myFunction); 
+document.getElementById("Frame22").addEventListener("change",myFunction);
+document.getElementById("Frame23").addEventListener("change",myFunction);
+document.getElementById("Frame24").addEventListener("change",myFunction);
+document.getElementById("Frame25").addEventListener("change",myFunction);
+document.getElementById("Frame26").addEventListener("change",myFunction);
+document.getElementById("submit").addEventListener("click", myFunction);
+document.getElementById("clear").addEventListener("click", clearAll);
+var vehicleSelectValue = "R8";
+<!--updateVehSelect();-->
+console.log("You have selected " + vehicleSelectValue)
+function updateVehSelect(){
+	vehicleSelectValue = document.getElementById("vehicle").value;
+	<!--document.getElementById("vehicleSelect").innerHTML = "You have selected: " + vehicleSelectValue;-->
+	myFunction();
+}
+function myFunction()
+{
+	clearHTML();
+	if (vehicleSelectValue==="Amazon - RM01_M580_R5_21"){
+		var dem_Frame1 = ["Flt1 - AC Line Temperature ORL fault","Flt2 - AC Line Temperature ORH fault","Flt3 - Accelerator Pedal 1 ORH fault","Flt4 - Accelerator Pedal 1 ORL fault","Flt5 - Estop SW Fault","Flt6 - HVIL Open Fault","Flt7 - Accelerator Pedal Plausibility fault","Flt8 - Brake Pedal ORH fault","Flt9 - Brake Pedal ORL fault","Flt10 - Compressor Pressure Transducer ORH/ Cab TSensORH fault","Flt11 - Compressor Pressure Transducer ORL/ Cab TSensORL fault","Flt12 - DC Line Temperature ORL fault","Flt13 - DC Line Temperature ORH fault","Flt14 - Evaporator 1 Thermistor ORH fault","Flt15 - Evaporator 1 Thermistor ORL fault","Flt16 - Evaporator 2 Thermistor ORH fault","Flt17 - Evaporator 2 Thermistor ORL fault","Flt18 - Evaporator 3 Thermistor ORH fault","Flt19 - Evaporator 3 Thermistor ORL fault","Flt20 - Evaporator 4 Thermistor ORH fault","Flt21 - Evaporator 4 Thermistor ORL fault","Flt22 - Radiator Thermistor ORH fault","Flt23 - Radiator Thermistor ORL fault","Flt24 - On Board Chargers Hot Fault","Flt25 - Battery 1 Suspended Fault","Flt26 - Battery 2 Suspended Fault","Flt27 - Battery 3 Suspended Fault","Flt28 - Battery 4 Suspended Fault","Flt29 - Battery Compressor Pressure Low Fault","Flt30 - Battery 1 Fault","Flt31 - Battery 2 Fault","Flt32 - Battery 3 Fault"];
+		var dem_Frame2 = ["Flt33 - Battery 4 Fault","Flt34 - PWR Cont1 Close Fault","Flt35 - PWR Cont2 Close Fault","Flt36 - PWR Cont3 Close Fault","Flt37 - PWR Cont4 Close Fault","Flt38 - Battery Too Hot fault","Flt39 - Battery Delta SOC limp fault","Flt40 - Battery Delta SOC warn fault","Flt41 - Number of battery connected below thershold - Limp Home fault","Flt42 - SOC below theshold - Limp Home fault","Flt43 - Battery 1 Current Message Timeout fault","Flt44 - Battery 1 Data Message Timeout fault","Flt45 - Battery 1 Status Message Timeout fault","Flt46 - Battery 1 Voltage Message Timeout fault","Flt47 - Battery 2 Current Message Timeout fault","Flt48 - Battery 2 Data Message Timeout fault","Flt49 - Battery 2 Status Message Timeout fault","Flt50 - Battery 2 Voltage Message Timeout fault","Flt51 - Battery 3 Current Message Timeout fault","Flt52 - Battery 3 Data Message Timeout fault","Flt53 - Battery 3 Status Message Timeout fault","Flt54 - Battery 3 Voltage Message Timeout fault","Flt55 - Battery 4 Current Message Timeout fault","Flt56 - Battery 4 Data Message Timeout fault","Flt57 - Battery 4 Status Message Timeout fault","Flt58 - Battery 4 Voltage Message Timeout fault","Flt59 - Charger 1 Act1 Message Timeout fault","Flt60 - Charger 1 Act2 Message Timeout fault","Flt61 - Charger 1 Sts Message Timeout fault","Flt62 - Charger 1 Tst1 Message Timeout fault","Flt63 - Charger 1 Tst2 Message Timeout fault","Flt64 - Charger 2 Act1 Message Timeout fault"];
+		var dem_Frame3 = ["Flt65 - Charger 2 Act2 Message Timeout fault","Flt66 - Charger 2 Sts Message Timeout fault","Flt67 - Charger 2 Tst1 Message Timeout fault","Flt68 - Charger 2 Tst2 Message Timeout fault","Flt69 - DCDC1 fault","Flt70 - DCDC1 InOut Message Timeout fault","Flt71 - DCDC1 Sts Message Timeout fault","Flt72 - DCDC2 fault","Flt73 - DCDC2 InOut Message Timeout fault","Flt74 - DCDC2 Sts Message Timeout fault","Flt75 - Battery 3 contactor open fault","Flt76 - Electric Coolant Pump fault","Flt77 - Electric Coolant Pump Sts Message Timeout fault","Flt78 - Motor fault","Flt79 - MCU Command Response 1 Message Timeout fault","Flt80 - MCU Command Response 2 Message Timeout fault","Flt81 - MCU Event Info Message Timeout fault","Flt82 - MCU Info 1 Message Timeout fault","Flt83 - MCU Info 2 Message Timeout fault","Flt84 - MCU Regen Derate fault","Flt85 - MCU Thermal Message Timeout fault","Flt86 - MCU Traction Derate fault","Flt87 - Motor Coolant Pump fault","Flt88 - Motor Coolant Pump Sts Message Timeout fault","Flt89 - Battery 1 contactor open fault","Flt90 - Trip Reset Message Timeout fault","Flt91 - Battery 2 contactor open fault","Flt92 - ABS EBC2 Message Timeout fault","Flt93 - Electronic Park Brake Current Sensor Fail fault","Flt94 - Shifter fault","Flt95 - Shifter Sts Message Timeout fault","Flt96 - ABS TSC1 Message Timeout fault"];
+		var dem_Frame4 = ["Flt97 - Techmore Volt1 Message Timeout fault","Flt98 - ABS WhlSpdInfo Message Timeout fault","Flt99 - Charging Derated fault","Flt100 - Charging Stopped Exit fault","Flt101 - Radiator Temperature above stop threshold fault","Flt102 - Radiator Temperature above warn threshold fault","Flt103 - DC contactor Welded fault","Flt104 - 24V battery drain - Stop Fault","Flt105 - 24V battery drain - Warn Fault","Flt106 - CAN 1 communication fault","Flt107 - CAN 2 communication fault","Flt108 - CAN 3 communication fault","Flt109 - CAN 4 communication fault","Flt110 - VCU reference ground A fault","Flt111 - VCU reference battery A fault","Flt112 - VCU reference ground B fault","Flt113 - VCU reference battery B fault","Flt114 - HVIL Open Impact fault","Flt115 - TM4 Motor Temperature above warn threshold fault","Flt116 - CAB AC Contactor Relay fault","Flt117 - CAB Compressor fan Relay fault","Flt118 - Condensor fan Relay fault","Flt119 - BMS Relay fault","Flt120 - Charge Enable Relay fault","Flt121 - Charge port lock forward relay fault","Flt122 - Charge port lock reverse relay fault","Flt123 - Battery Compressor fan Relay fault","Flt124 - DC negative contactor feedback fault","Flt125 - DC positive contactor feedback fault","Flt126 - Cab Comp Pressure low/ Cab Comp Cmd fault","Flt127 - Evaporator 1 medium speed Relay fault","Flt128 - Evaporator 1 high speed Relay fault"];
+		var dem_Frame5 = ["Flt129 - Evaporator 2 medium speed Relay fault","Flt130 - Evaporator 2 high speed Relay fault","Flt131 - Evaporator 3 medium speed Relay fault","Flt132 - Evaporator 3 high speed Relay fault","Flt133 - Evaporator 4 medium speed Relay fault","Flt134 - Evaporator 4 high speed Relay fault","Flt135 - HVAC Contactor Relay fault","Flt136 - 12V Ignition Relay fault","Flt137 - Radiator Fan Relay fault","Flt138 - Compressor Speed Command fault","Flt139 - BMS1 Initialization fault","Flt140 - BMS2 Initialization fault","Flt141 - BMS3 Initialization fault","Flt142 - BMS4 Initialization fault","Flt143 - Compressor Initialization 1 fault","Flt144 - Compressor Initialization 2 fault","Flt145 - All Contactor Close fault","Flt146 - All Contactor Open fault","Flt147 - Contactor Initialization fault","Flt148 - Electric Coolant Pump Initialization fault","Flt149 - Motor Coolant Pump Initialization fault","Flt150 - DCDC 1 700 to 24 Initialization fault","Flt151 - DCDC 2 700 to 24 Initialization fault","Flt152 - High Voltage Stable fault","Flt153 - DC Contactor Relay Closed fault","Flt154 - Battery 1 Thermistor OOR","Flt155 - Battery 2 Thermistor OOR","Flt156 - Battery 3 Thermistor OOR","Flt157 - Battery 4 Thermistor OOR","Flt158 - E- Stop fault","Flt159 - Battery Compressor fault 1","Flt160 - Battery Compressor fault 2"];
+		var dem_Frame6 = ["Flt161 - 12v Supply fault (Warn/Stop)","Flt162 - Amient Temperature Sensor ORH fault","Flt163 - Amient Temperature Sensor ORL fault","Flt164 - CAB Compressor Pressure Transducer ORH fault","Flt165 - CAB Compressor Pressure Transducer ORL fault","Flt166 - CAB Heater temperature ORH fault","Flt167 - CAB Heater temperature ORL fault","Flt168 - EPB Disengage Relay fault","Flt169 - EPB Engage Relay fault","Flt170 - EPB Safety Relay fault","Flt171 - 24V Ignition Relay fault","Flt172 - ABS Ignition Relay fault","Flt173 - Power Steering Pump Ignition Relay fault","Flt174 - Pricol Pump Ignition Relay fault","Flt175 - Radiator Fan 2 Relay fault","Flt176 - Regen Light Relay fault","Flt177 - Reverse Light Relay fault","Flt178 - EPB Stop fault","Flt179 - EPB Warn fault","Flt180 - CAB Compressure Speed Command fault","Flt181 - Pricol Pump Speed Command fault","Flt182 - CAB Heater PTCSts0 Message Timeout fault","Flt183 - CAB Heater PTCSts1 Message Timeout fault","Flt184 - Power Steering Pump Over Temperature fault","Flt185 - Power Steering Pump fault","Flt186 - Battery 1 operation fault","Flt187 - Battery 2 operation fault","Flt188 - Battery 3 operation fault","Flt189 - Battery 4 operation fault","Flt190 - High Voltage below minimum thershold fault","Flt191 - Number of battery connected below thershold fault","Flt192 - Battery 4 Contactor fault"];
+		var dem_Frame7 = ["This is not supported at the moment"];
+		var dem_Frame8 = ["This is not supported at the moment"];
+		var dem_Frame9 = ["BATT1 - Cellmin voltage low fault","BATT1 - Cellmax voltage high fault","BATT1 - Cell Temp low fault","BATT1 - Cell Temp high fault","BATT1 - Charge current exceed fault","BATT1 - Discharge current exceed fault","BATT1 - I2t limit exceed fault","BATT1 - Cellmin voltage no val fault","BATT1 - Cellmin temp no val fault","BATT1 - Temp sensor SC fault","BATT1 - Temp sensor OC fault","BATT1 - CMU Communication fault","BATT1 - CMU mismatch fault","BATT1 - Max Contactor retries","BATT1 - Under current fault","BATT1 - Isolation test incomplete","BATT1 - Isolation test fail - Load mode","BATT1 - Isolation test fail - Read mode"];
+		var dem_Frame10 = ["BATT2 - Cellmin voltage low fault","BATT2 - Cellmax voltage high fault","BATT2 - Cell Temp low fault","BATT2 - Cell Temp high fault","BATT2 - Charge current exceed fault","BATT2 - Discharge current exceed fault","BATT2 - I2t limit exceed fault","BATT2 - Cellmin voltage no val fault","BATT2 - Cellmin temp no val fault","BATT2 - Temp sensor SC fault","BATT2 - Temp sensor OC fault","BATT2 - CMU Communication fault","BATT2 - CMU mismatch fault","BATT2 - Max Contactor retries","BATT2 - Under current fault","BATT2 - Isolation test incomplete","BATT2 - Isolation test fail - Load mode","BATT2 - Isolation test fail - Read mode"];
+		var dem_Frame11 = ["BATT3 - Cellmin voltage low fault","BATT3 - Cellmax voltage high fault","BATT3 - Cell Temp low fault","BATT3 - Cell Temp high fault","BATT3 - Charge current exceed fault","BATT3 - Discharge current exceed fault","BATT3 - I2t limit exceed fault","BATT3 - Cellmin voltage no val fault","BATT3 - Cellmin temp no val fault","BATT3 - Temp sensor SC fault","BATT3 - Temp sensor OC fault","BATT3 - CMU Communication fault","BATT3 - CMU mismatch fault","BATT3 - Max Contactor retries","BATT3 - Under current fault","BATT3 - Isolation test incomplete","BATT3 - Isolation test fail - Load mode","BATT3 - Isolation test fail - Read mode"];
+		var dem_Frame12 = ["BATT4 - Cellmin voltage low fault","BATT4 - Cellmax voltage high fault","BATT4 - Cell Temp low fault","BATT4 - Cell Temp high fault","BATT4 - Charge current exceed fault","BATT4 - Discharge current exceed fault","BATT4 - I2t limit exceed fault","BATT4 - Cellmin voltage no val fault","BATT4 - Cellmin temp no val fault","BATT4 - Temp sensor SC fault","BATT4 - Temp sensor OC fault","BATT4 - CMU Communication fault","BATT4 - CMU mismatch fault","BATT4 - Max Contactor retries","BATT4 - Under current fault","BATT4 - Isolation test incomplete","BATT4 - Isolation test fail - Load mode","BATT4 - Isolation test fail - Read mode"];
+		var dem_Frame13 = ["BATT5 - Cellmin voltage low fault","BATT5 - Cellmax voltage high fault","BATT5 - Cell Temp low fault","BATT5 - Cell Temp high fault","BATT5 - Charge current exceed fault","BATT5 - Discharge current exceed fault","BATT5 - I2t limit exceed fault","BATT5 - Cellmin voltage no val fault","BATT5 - Cellmin temp no val fault","BATT5 - Temp sensor SC fault","BATT5 - Temp sensor OC fault","BATT5 - CMU Communication fault","BATT5 - CMU mismatch fault","BATT5 - Max Contactor retries","BATT5 - Under current fault","BATT5 - Isolation test incomplete","BATT5 - Isolation test fail - Load mode","BATT5 - Isolation test fail - Read mode"];
+		var dem_Frame14 = ["DCDC1 - Internal EEPROM memory fault","DCDC1 - Output is short-circuit","DCDC1 - Temperature sensor failed","DCDC1 - Overloaded power","DCDC1 - Turned off due to output OV","DCDC1 - Reverse polarity on output","DCDC1 - Input voltage under limit","DCDC1 - Input voltage over limit","DCDC1 - Output voltage under limit","DCDC1 - Output voltage over limit","DCDC1 - Output current over limit","DCDC1 - Over temperature","DCDC1 - Internal I2C bus fault","DCDC1 - CAN bus fault"];
+		var dem_Frame15 = ["DCDC2 - Internal EEPROM memory fault","DCDC2 - Output is short-circuit","DCDC2 - Temperature sensor failed","DCDC2 - Overloaded power","DCDC2 - Turned off due to output OV","DCDC2 - Reverse polarity on output","DCDC2 - Input voltage under limit","DCDC2 - Input voltage over limit","DCDC2 - Output voltage under limit","DCDC2 - Output voltage over limit","DCDC2 - Output current over limit","DCDC2 - Over temperature","DCDC2 - Internal I2C bus fault","DCDC2 - CAN bus fault"];
+		var dem_Frame16 = ["DCDC3 - Internal EEPROM memory fault","DCDC3 - Output is short-circuit","DCDC3 - Temperature sensor failed","DCDC3 - Overloaded power","DCDC3 - Turned off due to output OV","DCDC3 - Reverse polarity on output","DCDC3 - Input voltage under limit","DCDC3 - Input voltage over limit","DCDC3 - Output voltage under limit","DCDC3 - Output voltage over limit","DCDC3 - Output current over limit","DCDC3 - Over temperature","DCDC3 - Internal I2C bus fault","DCDC3 - CAN bus fault"];
+		var dem_Frame17 = ["Charger1 - AC current above max","Charger1 - Cooling circuit failure","Charger1 - HV communication erratic","Charger1 - Bulk error","Charger1 - Charger derated","Charger1 - DC output over voltage","Charger1 - Neutral cable connection problem"];
+		var dem_Frame18 = ["Charger2 - AC current above max","Charger2 - Cooling circuit failure","Charger2 - HV communication erratic","Charger2 - Bulk error","Charger2 - Charger derated","Charger2 - DC output over voltage","Charger2 - Neutral cable connection problem"];
+		var dem_Frame19 = ["CabHtr- High Voltage Over","CabHtr- High Voltage Under","CabHtr- Low Voltage Over","CabHtr- Low Voltage Under","CabHtr- Current Over","CabHtr- Temperature Over","CabHtr- PCB Temp Over","CabHtr- CAN Timeout","CabHtr- Inlet Temp Failure","CabHtr- Outlet Temp Failure","CabHtr- PCB Temp Failure","CabHtr- Current Failure","CabHtr- PWM1 Chip Failure","CabHtr- PWM2 Chip Failure","CabHtr- High Voltage Interlock Failure","CabHtr- Reverse Connection/Short Circuit","CabHtr- Dry Heating Failure","CabHtr- PWM3 Chip Failure"];
+		var dem_Frame20 = ["MotorPump - Unable to Start","MotorPump - Over-voltage Protection Shutdown","MotorPump - Under-voltage Protection Shutdown","MotorPump - Over-Temperature Protection Shutdown","MotorPump - Operating at Amperage Limit"];
+		var dem_Frame21 = ["ElecPump - Unable to Start","ElecPump - Over-voltage Protection Shutdown","ElecPump - Under-voltage Protection Shutdown","ElecPump - Over-Temperature Protection Shutdown","ElecPump - Operating at Amperage Limit"];
+		var dem_Frame22 = ["This is not supported at the moment"];
+		}
+	else if (vehicleSelectValue==="Loomis - SV01_X13a_Prebuilt_40") {
+		var dem_Frame1 = ["Flt1  -  Accelerator Pedal 1 ORH fault", "Flt2  -  Accelerator Pedal 1 ORL fault", "Flt3  -  Accelerator Pedal 2 ORH fault", "Flt4  -  Accelerator Pedal 2 ORL fault", "Flt5  -  Accelerator Pedal Plausibility fault", "Flt6  -  Brake Pedal ORH fault", "Flt7  -  Brake Pedal ORL fault", "Flt8  -  Compressor Pressure Transducer ORH fault", "Flt9  -  Compressor Pressure Transducer ORL fault", "Flt10  -  Evaporator 1 Thermistor ORH fault", "Flt11  -  Evaporator 1 Thermistor ORL fault", "Flt12  -  Evaporator 2 Thermistor ORH fault", "Flt13  -  Evaporator 2 Thermistor ORL fault", "Flt14  -  Evaporator 3 Thermistor ORH fault", "Flt15  -  Evaporator 3 Thermistor ORL fault", "Flt16  -  Evaporator 4 Thermistor ORH fault", "Flt17  -  Evaporator 4 Thermistor ORL fault", "Flt18  -  Evaporator 5 Thermistor ORH fault", "Flt19  -  Evaporator 5 Thermistor ORL fault", "Flt20  -  Radiator Thermistor ORH fault", "Flt21  -  Radiator Thermistor ORL fault", "Flt22  -  On Board Chargers Hot Fault", "Flt23  -  Battery 1 Suspended Fault", "Flt24  -  Battery 2 Suspended Fault", "Flt25  -  Battery 3 Suspended Fault", "Flt26  -  Battery 4 Suspended Fault", "Flt27  -  Battery 5 Suspended Fault", "Flt28  -  Battery Compressor Pressure Low Fault", "Flt29  -  Battery 1 Fault", "Flt30  -  Battery 2 Fault", "Flt31  -  Battery 3 Fault", "Flt32  -  Battery 4 Fault"];
+		var dem_Frame2 = ["Flt33  -  Battery 5 Fault", "Flt34  -  Battery Too Hot fault", "Flt35  -  Battery Delta SOC limp fault", "Flt36  -  Battery Delta SOC warn fault", "Flt37  -  Number of battery connected below thershold - Limp Home fault", "Flt38  -  SOC below theshold - Limp Home fault", "Flt39  -  Battery 1 Current Message Timeout fault", "Flt40  -  Battery 1 Data Message Timeout fault", "Flt41  -  Battery 1 Status Message Timeout fault", "Flt42  -  Battery 1 Voltage Message Timeout fault", "Flt43  -  Battery 2 Current Message Timeout fault", "Flt44  -  Battery 2 Data Message Timeout fault", "Flt45  -  Battery 2 Status Message Timeout fault", "Flt46  -  Battery 2 Voltage Message Timeout fault", "Flt47  -  Battery 3 Current Message Timeout fault", "Flt48  -  Battery 3 Data Message Timeout fault", "Flt49  -  Battery 3 Status Message Timeout fault", "Flt50  -  Battery 3 Voltage Message Timeout fault", "Flt51  -  Battery 4 Current Message Timeout fault", "Flt52  -  Battery 4 Data Message Timeout fault", "Flt53  -  Battery 4 Status Message Timeout fault", "Flt54  -  Battery 4 Voltage Message Timeout fault", "Flt55  -  Battery 5 Current Message Timeout fault", "Flt56  -  Battery 5 Data Message Timeout fault", "Flt57  -  Battery 5 Status Message Timeout fault", "Flt58  -  Battery 5 Voltage Message Timeout fault", "Flt59  -  Charger 1 Act1 Message Timeout fault", "Flt60  -  Charger 1 Act2 Message Timeout fault", "Flt61  -  Charger 1 Sts Message Timeout fault", "Flt62  -  Charger 1 Tst1 Message Timeout fault", "Flt63  -  Charger 1 Tst2 Message Timeout fault", "Flt64  -  Charger 2 Act1 Message Timeout fault"];
+		var dem_Frame3 = ["Flt65  -  Charger 2 Act2 Message Timeout fault", "Flt66  -  Charger 2 Sts Message Timeout fault", "Flt67  -  Charger 2 Tst1 Message Timeout fault", "Flt68  -  Charger 2 Tst2 Message Timeout fault", "Flt69  -  DCDC1 fault", "Flt70  -  DCDC1 InOut Message Timeout fault", "Flt71  -  DCDC1 Sts Message Timeout fault", "Flt72  -  DCDC2 fault", "Flt73  -  DCDC2 InOut Message Timeout fault", "Flt74  -  DCDC2 Sts Message Timeout fault", "Flt75  -  Electric Coolant Pump fault", "Flt76  -  Electric Coolant Pump Sts Message Timeout fault", "Flt77  -  Motor fault", "Flt78  -  MCU Command Response 2 Message Timeout fault", "Flt79  -  MCU Command Response 1 Message Timeout fault", "Flt80  -  MCU Info 1 Message Timeout fault", "Flt81  -  MCU Event Info Message Timeout fault", "Flt82  -  MCU Info 2 Message Timeout fault", "Flt83  -  MCU Regen Derate fault", "Flt84  -  MCU Thermal Message Timeout fault", "Flt85  -  MCU Traction Derate fault", "Flt86  -  Motor Coolant Pump fault", "Flt87  -  Motor Coolant Pump Sts Message Timeout fault", "Flt88  -  Battery 1 contactor open fault", "Flt89  -  Battery 2 contactor open fault", "Flt90  -  Battery 3 contactor open fault", "Flt91  -  Battery 4 contactor open fault", "Flt92  -  Battery 5 contactor open fault", "Flt93  -  Trip Reset Message Timeout Fault", "Flt94  -  Electronic Park Brake Current Sensor Fail fault", "Flt95  -  EPB Position Sensor Fault", "Flt96  -  ABS TSC1 Message Timeout fault"];
+		var dem_Frame4 = ["Flt97  -  Techmore Volt1 Message Timeout fault", "Flt98  -  ABS WhlSpdInfo Message Timeout fault", "Flt99  -  Charging Derated fault", "Flt100  -  Charging Stopped fault", "Flt101  -  Radiator Temperature above stop threshold fault", "Flt102  -  Radiator Temperature above warn threshold fault", "Flt103  -  12V battery drain - Stop Fault", "Flt104  -  12V battery drain - Warn Fault", "Flt105  -  24V battery drain - Stop Fault", "Flt106  -  24V battery drain - Warn Fault", "Flt107  -  CAN 1 communication fault", "Flt108  -  CAN 2 communication fault", "Flt109  -  CAN 3 communication fault", "Flt110  -  Shifter fault", "Flt111  -  Shifter Sts Message Timeout fault", "Flt112  -  HVIL Open Impact fault", "Flt113  -  CAB AC Contactor Relay fault", "Flt114  -  Condensor fan Relay fault", "Flt115  -  12V Ignition Relay fault", "Flt116  -  Compressor Fan Fault", "Flt117  -  E-Stop Sw fault", "Flt118  -  Battery Compressor fan Relay fault", "Flt119  -  Ignition Relay Fault", "Flt120  -  Radiator Fan Relay fault", "Flt121  -  EPB Disengage Relay fault", "Flt122  -  EPB Engage Relay fault", "Flt123  -  EPB Safety Relay fault", "Flt124  -  Power Steering Pump Ignition Relay fault", "Flt125  -  Pricol Pump Ignition Relay fault", "Flt126  -  Regen Light Relay fault", "Flt127  -  Compressor Speed Command fault", "Flt128  -  BMS1 Initialization fault"];
+		var dem_Frame5 = ["Flt129  -  BMS2 Initialization fault", "Flt130  -  BMS3 Initialization fault", "Flt131  -  BMS4 Initialization fault", "Flt132  -  BMS5 Initialization fault", "Flt133  -  Compressor Initialization 1 fault", "Flt134  -  Compressor Initialization 2 fault", "Flt135  -  All Contactor Close fault", "Flt136  -  Contactor Initialization fault", "Flt137  -  Electric Coolant Pump Initialization fault", "Flt138  -  Motor Coolant Pump Initialization fault", "Flt139  -  DCDC 1 700 to 24 Initialization fault", "Flt140  -  DCDC 2 700 to 24 Initialization fault", "Flt141  -  High Voltage Stable fault", "Flt142  -  Battery 1 Erorr Counter fault", "Flt143  -  Battery 2 Erorr Counter fault", "Flt144  -  Battery 3 Erorr Counter fault", "Flt145  -  Battery 4 Erorr Counter fault", "Flt146  -  Battery 5 Erorr Counter fault", "Flt147  -  E- Stop fault", "Flt148  -  Battery Compressor fault 1", "Flt149  -  Battery Compressor fault 2", "Flt150  -  HVIL Open fault", "Flt151  -  Amient Temperature Sensor ORH fault", "Flt152  -  Amient Temperature Sensor ORL fault", "Flt153  -  CAB Compressor Pressure Transducer ORH fault", "Flt154  -  CAB Compressor Pressure Transducer ORL fault", "Flt155  -  CAB Heater temperature ORH fault", "Flt156  -  CAB Heater temperature ORL fault", "Flt157  -  EPB Stop fault", "Flt158  -  EPB Warn fault", "Flt159  -  CAB Compressure Speed Command fault", "Flt160  -  Pricol Pump Speed Command fault"];
+		var dem_Frame6 = ["Flt161  -  CAB Heater PTCSts0 Message Timeout fault", "Flt162  -  CAB Heater PTCSts1 Message Timeout fault", "Flt163  -  CAB Compressor fault 1", "Flt164  -  CAB Compressor fault 2", "Flt165  -  Battery 1 operation fault", "Flt166  -  Battery 2 operation fault", "Flt167  -  Battery 3 operation fault", "Flt168  -  Battery 4 operation fault", "Flt169  -  Battery 5 operation fault", "Flt170  -  Number of battery connected below thershold fault", "Flt171  -  High Voltage below minimum thershold fault", "Flt172  -  Battery 1 Over Temperature Fault", "Flt173  -  Battery 2 Over Temperature Fault", "Flt174  -  Battery 3 Over Temperature Fault", "Flt175  -  Battery 4 Over Temperature Fault", "Flt176  -  Battery 5 Over Temperature Fault", "Flt177  -  Battery 1 Suspended Fault", "Flt178  -  Battery 2 Suspended Fault", "Flt179  -  Battery 3 Suspended Fault", "Flt180  -  Battery 4 Suspended Fault", "Flt181  -  Battery 5 Suspended Fault", "Flt182  -  Cab Compressor Pressure Low", "Flt183  -  Charge Diag - Charging Stopped", "Flt184  -  Ignition HV Cmd Loss", "Flt185  -  N/A", "Flt186  -  N/A", "Flt187  -  N/A", "Flt188  -  N/A", "Flt189  -  N/A", "Flt190  -  N/A", "Flt191  -  N/A", "Flt192  -  N/A" ];
+		var dem_Frame7 = ["This is not supported at the moment"];
+		var dem_Frame8 = ["This is not supported at the moment"];
+		var dem_Frame9 = ["BATT1 - Cellmin voltage low fault","BATT1 - Cellmax voltage high fault","BATT1 - Cell Temp low fault","BATT1 - Cell Temp high fault","BATT1 - Charge current exceed fault","BATT1 - Discharge current exceed fault","BATT1 - I2t limit exceed fault","BATT1 - Cellmin voltage no val fault","BATT1 - Cellmin temp no val fault","BATT1 - Temp sensor SC fault","BATT1 - Temp sensor OC fault","BATT1 - CMU Communication fault","BATT1 - CMU mismatch fault","BATT1 - Max Contactor retries","BATT1 - Under current fault","BATT1 - Isolation test incomplete","BATT1 - Isolation test fail - Load mode","BATT1 - Isolation test fail - Read mode"];
+		var dem_Frame10 = ["BATT2 - Cellmin voltage low fault","BATT2 - Cellmax voltage high fault","BATT2 - Cell Temp low fault","BATT2 - Cell Temp high fault","BATT2 - Charge current exceed fault","BATT2 - Discharge current exceed fault","BATT2 - I2t limit exceed fault","BATT2 - Cellmin voltage no val fault","BATT2 - Cellmin temp no val fault","BATT2 - Temp sensor SC fault","BATT2 - Temp sensor OC fault","BATT2 - CMU Communication fault","BATT2 - CMU mismatch fault","BATT2 - Max Contactor retries","BATT2 - Under current fault","BATT2 - Isolation test incomplete","BATT2 - Isolation test fail - Load mode","BATT2 - Isolation test fail - Read mode"];
+		var dem_Frame11 = ["BATT3 - Cellmin voltage low fault","BATT3 - Cellmax voltage high fault","BATT3 - Cell Temp low fault","BATT3 - Cell Temp high fault","BATT3 - Charge current exceed fault","BATT3 - Discharge current exceed fault","BATT3 - I2t limit exceed fault","BATT3 - Cellmin voltage no val fault","BATT3 - Cellmin temp no val fault","BATT3 - Temp sensor SC fault","BATT3 - Temp sensor OC fault","BATT3 - CMU Communication fault","BATT3 - CMU mismatch fault","BATT3 - Max Contactor retries","BATT3 - Under current fault","BATT3 - Isolation test incomplete","BATT3 - Isolation test fail - Load mode","BATT3 - Isolation test fail - Read mode"];
+		var dem_Frame12 = ["BATT4 - Cellmin voltage low fault","BATT4 - Cellmax voltage high fault","BATT4 - Cell Temp low fault","BATT4 - Cell Temp high fault","BATT4 - Charge current exceed fault","BATT4 - Discharge current exceed fault","BATT4 - I2t limit exceed fault","BATT4 - Cellmin voltage no val fault","BATT4 - Cellmin temp no val fault","BATT4 - Temp sensor SC fault","BATT4 - Temp sensor OC fault","BATT4 - CMU Communication fault","BATT4 - CMU mismatch fault","BATT4 - Max Contactor retries","BATT4 - Under current fault","BATT4 - Isolation test incomplete","BATT4 - Isolation test fail - Load mode","BATT4 - Isolation test fail - Read mode"];
+		var dem_Frame13 = ["BATT5 - Cellmin voltage low fault","BATT5 - Cellmax voltage high fault","BATT5 - Cell Temp low fault","BATT5 - Cell Temp high fault","BATT5 - Charge current exceed fault","BATT5 - Discharge current exceed fault","BATT5 - I2t limit exceed fault","BATT5 - Cellmin voltage no val fault","BATT5 - Cellmin temp no val fault","BATT5 - Temp sensor SC fault","BATT5 - Temp sensor OC fault","BATT5 - CMU Communication fault","BATT5 - CMU mismatch fault","BATT5 - Max Contactor retries","BATT5 - Under current fault","BATT5 - Isolation test incomplete","BATT5 - Isolation test fail - Load mode","BATT5 - Isolation test fail - Read mode"];
+		var dem_Frame14 = ["DCDC1 - Internal EEPROM memory fault","DCDC1 - Output is short-circuit","DCDC1 - Temperature sensor failed","DCDC1 - Overloaded power","DCDC1 - Turned off due to output OV","DCDC1 - Reverse polarity on output","DCDC1 - Input voltage under limit","DCDC1 - Input voltage over limit","DCDC1 - Output voltage under limit","DCDC1 - Output voltage over limit","DCDC1 - Output current over limit","DCDC1 - Over temperature","DCDC1 - Internal I2C bus fault","DCDC1 - CAN bus fault"];
+		var dem_Frame15 = ["DCDC2 - Internal EEPROM memory fault","DCDC2 - Output is short-circuit","DCDC2 - Temperature sensor failed","DCDC2 - Overloaded power","DCDC2 - Turned off due to output OV","DCDC2 - Reverse polarity on output","DCDC2 - Input voltage under limit","DCDC2 - Input voltage over limit","DCDC2 - Output voltage under limit","DCDC2 - Output voltage over limit","DCDC2 - Output current over limit","DCDC2 - Over temperature","DCDC2 - Internal I2C bus fault","DCDC2 - CAN bus fault"];
+		var dem_Frame16 = ["DCDC3 - Internal EEPROM memory fault","DCDC3 - Output is short-circuit","DCDC3 - Temperature sensor failed","DCDC3 - Overloaded power","DCDC3 - Turned off due to output OV","DCDC3 - Reverse polarity on output","DCDC3 - Input voltage under limit","DCDC3 - Input voltage over limit","DCDC3 - Output voltage under limit","DCDC3 - Output voltage over limit","DCDC3 - Output current over limit","DCDC3 - Over temperature","DCDC3 - Internal I2C bus fault","DCDC3 - CAN bus fault"];
+		var dem_Frame17 = ["Charger1 - AC current above max","Charger1 - Cooling circuit failure","Charger1 - HV communication erratic","Charger1 - Bulk error","Charger1 - Charger derated","Charger1 - DC output over voltage","Charger1 - Neutral cable connection problem"];
+		var dem_Frame18 = ["Charger2 - AC current above max","Charger2 - Cooling circuit failure","Charger2 - HV communication erratic","Charger2 - Bulk error","Charger2 - Charger derated","Charger2 - DC output over voltage","Charger2 - Neutral cable connection problem"];
+		var dem_Frame19 = ["CabHtr- High Voltage Over","CabHtr- High Voltage Under","CabHtr- Low Voltage Over","CabHtr- Low Voltage Under","CabHtr- Current Over","CabHtr- Temperature Over","CabHtr- PCB Temp Over","CabHtr- CAN Timeout","CabHtr- Inlet Temp Failure","CabHtr- Outlet Temp Failure","CabHtr- PCB Temp Failure","CabHtr- Current Failure","CabHtr- PWM1 Chip Failure","CabHtr- PWM2 Chip Failure","CabHtr- High Voltage Interlock Failure","CabHtr- Reverse Connection/Short Circuit","CabHtr- Dry Heating Failure","CabHtr- PWM3 Chip Failure"];
+		var dem_Frame20 = ["MotorPump - Unable to Start","MotorPump - Over-voltage Protection Shutdown","MotorPump - Under-voltage Protection Shutdown","MotorPump - Over-Temperature Protection Shutdown","MotorPump - Operating at Amperage Limit"];
+		var dem_Frame21 = ["ElecPump - Unable to Start","ElecPump - Over-voltage Protection Shutdown","ElecPump - Under-voltage Protection Shutdown","ElecPump - Over-Temperature Protection Shutdown","ElecPump - Operating at Amperage Limit"];
+		var dem_Frame22 = ["This is not supported at the moment"];}
+	else if (vehicleSelectValue==="Amazon - RM01_M580_R6_12"){
+		var dem_Frame1 = ["Flt1 - AC Line Temperature ORL fault","Flt2 - AC Line Temperature ORH fault","Flt3 - Accelerator Pedal 1 ORH fault","Flt4 - Accelerator Pedal 1 ORL fault","Flt5 - Estop SW Fault","Flt6 - HVIL Open Fault","Flt7 - Accelerator Pedal Plausibility fault","Flt8 - Brake Pedal ORH fault","Flt9 - Brake Pedal ORL fault","Flt10 - Compressor Pressure Transducer ORH/ Cab TSensORH fault","Flt11 - Compressor Pressure Transducer ORL/ Cab TSensORL fault","Flt12 - DC Line Temperature ORL fault","Flt13 - DC Line Temperature ORH fault","Flt14 - Evaporator 1 Thermistor ORH fault","Flt15 - Evaporator 1 Thermistor ORL fault","Flt16 - Evaporator 2 Thermistor ORH fault","Flt17 - Evaporator 2 Thermistor ORL fault","Flt18 - Evaporator 3 Thermistor ORH fault","Flt19 - Evaporator 3 Thermistor ORL fault","Flt20 - Evaporator 4 Thermistor ORH fault","Flt21 - Evaporator 4 Thermistor ORL fault","Flt22 - Radiator Thermistor ORH fault","Flt23 - Radiator Thermistor ORL fault","Flt24 - On Board Chargers Hot Fault","Flt25 - Battery 1 Suspended Fault","Flt26 - Battery 2 Suspended Fault","Flt27 - Battery 3 Suspended Fault","Flt28 - Battery 4 Suspended Fault","Flt29 - Battery Compressor Pressure Low Fault","Flt30 - Battery 1 Fault","Flt31 - Battery 2 Fault","Flt32 - Battery 3 Fault"];
+		var dem_Frame2 = ["Flt33 - Battery 4 Fault","Flt34 - PWR Cont1 Close Fault","Flt35 - PWR Cont2 Close Fault","Flt36 - PWR Cont3 Close Fault","Flt37 - PWR Cont4 Close Fault","Flt38 - Battery Too Hot fault","Flt39 - Battery Delta SOC limp fault","Flt40 - Battery Delta SOC warn fault","Flt41 - Number of battery connected below thershold - Limp Home fault","Flt42 - SOC below theshold - Limp Home fault","Flt43 - Battery 1 Current Message Timeout fault","Flt44 - Battery 1 Data Message Timeout fault","Flt45 - Battery 1 Status Message Timeout fault","Flt46 - Battery 1 Voltage Message Timeout fault","Flt47 - Battery 2 Current Message Timeout fault","Flt48 - Battery 2 Data Message Timeout fault","Flt49 - Battery 2 Status Message Timeout fault","Flt50 - Battery 2 Voltage Message Timeout fault","Flt51 - Battery 3 Current Message Timeout fault","Flt52 - Battery 3 Data Message Timeout fault","Flt53 - Battery 3 Status Message Timeout fault","Flt54 - Battery 3 Voltage Message Timeout fault","Flt55 - Battery 4 Current Message Timeout fault","Flt56 - Battery 4 Data Message Timeout fault","Flt57 - Battery 4 Status Message Timeout fault","Flt58 - Battery 4 Voltage Message Timeout fault","Flt59 - Charger 1 Act1 Message Timeout fault","Flt60 - Charger 1 Act2 Message Timeout fault","Flt61 - Charger 1 Sts Message Timeout fault","Flt62 - Charger 1 Tst1 Message Timeout fault","Flt63 - Charger 1 Tst2 Message Timeout fault","Flt64 - Charger 2 Act1 Message Timeout fault"];
+		var dem_Frame3 = ["Flt65 - Charger 2 Act2 Message Timeout fault","Flt66 - Charger 2 Sts Message Timeout fault","Flt67 - Charger 2 Tst1 Message Timeout fault","Flt68 - Charger 2 Tst2 Message Timeout fault","Flt69 - DCDC1 fault","Flt70 - DCDC1 InOut Message Timeout fault","Flt71 - DCDC1 Sts Message Timeout fault","Flt72 - DCDC2 fault","Flt73 - DCDC2 InOut Message Timeout fault","Flt74 - DCDC2 Sts Message Timeout fault","Flt75 - Battery 3 contactor open fault","Flt76 - Electric Coolant Pump fault","Flt77 - Electric Coolant Pump Sts Message Timeout fault","Flt78 - Motor fault","Flt79 - MCU Command Response 1 Message Timeout fault","Flt80 - MCU Command Response 2 Message Timeout fault","Flt81 - MCU Event Info Message Timeout fault","Flt82 - MCU Info 1 Message Timeout fault","Flt83 - MCU Info 2 Message Timeout fault","Flt84 - MCU Regen Derate fault","Flt85 - MCU Thermal Message Timeout fault","Flt86 - MCU Traction Derate fault","Flt87 - Motor Coolant Pump fault","Flt88 - Motor Coolant Pump Sts Message Timeout fault","Flt89 - Battery 1 contactor open fault","Flt90 - Trip Reset Message Timeout fault","Flt91 - Battery 2 contactor open fault","Flt92 - ABS EBC2 Message Timeout fault","Flt93 - Electronic Park Brake Current Sensor Fail fault","Flt94 - Shifter fault","Flt95 - Shifter Sts Message Timeout fault","Flt96 - ABS TSC1 Message Timeout fault"];
+		var dem_Frame4 = ["Flt97 - Techmore Volt1 Message Timeout fault","Flt98 - ABS WhlSpdInfo Message Timeout fault","Flt99 - Charging Derated fault","Flt100 - Charging Stopped Exit fault","Flt101 - Radiator Temperature above stop threshold fault","Flt102 - Radiator Temperature above warn threshold fault","Flt103 - DC contactor Welded fault","Flt104 - 24V battery drain - Stop Fault","Flt105 - 24V battery drain - Warn Fault","Flt106 - CAN 1 communication fault","Flt107 - CAN 2 communication fault","Flt108 - CAN 3 communication fault","Flt109 - CAN 4 communication fault","Flt110 - VCU reference ground A fault","Flt111 - VCU reference battery A fault","Flt112 - VCU reference ground B fault","Flt113 - VCU reference battery B fault","Flt114 - HVIL Open Impact fault","Flt115 - TM4 Motor Temperature above warn threshold fault","Flt116 - CAB AC Contactor Relay fault","Flt117 - CAB Compressor fan Relay fault","Flt118 - Condensor fan Relay fault","Flt119 - BMS Relay fault","Flt120 - Charge Enable Relay fault","Flt121 - Charge port lock forward relay fault","Flt122 - Charge port lock reverse relay fault","Flt123 - Battery Compressor fan Relay fault","Flt124 - DC negative contactor feedback fault","Flt125 - DC positive contactor feedback fault","Flt126 - Cab Comp Pressure low/ Cab Comp Cmd fault","Flt127 - Evaporator 1 medium speed Relay fault","Flt128 - Evaporator 1 high speed Relay fault"];
+		var dem_Frame5 = ["Flt129 - Evaporator 2 medium speed Relay fault","Flt130 - Evaporator 2 high speed Relay fault","Flt131 - Evaporator 3 medium speed Relay fault","Flt132 - Evaporator 3 high speed Relay fault","Flt133 - Evaporator 4 medium speed Relay fault","Flt134 - Evaporator 4 high speed Relay fault","Flt135 - HVAC Contactor Relay fault","Flt136 - 12V Ignition Relay fault","Flt137 - Radiator Fan Relay fault","Flt138 - Compressor Speed Command fault","Flt139 - BMS1 Initialization fault","Flt140 - BMS2 Initialization fault","Flt141 - BMS3 Initialization fault","Flt142 - BMS4 Initialization fault","Flt143 - Compressor Initialization 1 fault","Flt144 - Compressor Initialization 2 fault","Flt145 - All Contactor Close fault","Flt146 - All Contactor Open fault","Flt147 - Contactor Initialization fault","Flt148 - Electric Coolant Pump Initialization fault","Flt149 - Motor Coolant Pump Initialization fault","Flt150 - DCDC 1 700 to 24 Initialization fault","Flt151 - DCDC 2 700 to 24 Initialization fault","Flt152 - High Voltage Stable fault","Flt153 - DC Contactor Relay Closed fault","Flt154 - Battery 1 Thermistor OOR","Flt155 - Battery 2 Thermistor OOR","Flt156 - Battery 3 Thermistor OOR","Flt157 - Battery 4 Thermistor OOR","Flt158 - E- Stop fault","Flt159 - Battery Compressor fault 1","Flt160 - Battery Compressor fault 2"];
+		var dem_Frame6 = ["Flt161 - 12v Supply fault (Warn/Stop)","Flt162 - Amient Temperature Sensor ORH fault","Flt163 - Amient Temperature Sensor ORL fault","Flt164 - CAB Compressor Pressure Transducer ORH fault","Flt165 - CAB Compressor Pressure Transducer ORL fault","Flt166 - CAB Heater temperature ORH fault","Flt167 - CAB Heater temperature ORL fault","Flt168 - EPB Disengage Relay fault","Flt169 - EPB Engage Relay fault","Flt170 - EPB Safety Relay fault","Flt171 - 24V Ignition Relay fault","Flt172 - ABS Ignition Relay fault","Flt173 - Power Steering Pump Ignition Relay fault","Flt174 - Pricol Pump Ignition Relay fault","Flt175 - Radiator Fan 2 Relay fault","Flt176 - Regen Light Relay fault","Flt177 - Reverse Light Relay fault","Flt178 - EPB Stop fault","Flt179 - EPB Warn fault","Flt180 - CAB Compressure Speed Command fault","Flt181 - Pricol Pump Speed Command fault","Flt182 - CAB Heater PTCSts0 Message Timeout fault","Flt183 - CAB Heater PTCSts1 Message Timeout fault","Flt184 - Power Steering Pump Over Temperature fault","Flt185 - Power Steering Pump fault","Flt186 - Battery 1 operation fault","Flt187 - Battery 2 operation fault","Flt188 - Battery 3 operation fault","Flt189 - Battery 4 operation fault","Flt190 - High Voltage below minimum thershold fault","Flt191 - Number of battery connected below thershold fault","Flt192 - Battery 4 Contactor fault"];
+		var dem_Frame7 = ["This is not supported at the moment"];
+		var dem_Frame8 = ["This is not supported at the moment"];
+		var dem_Frame9 = ["BATT1 - Cellmin voltage low fault","BATT1 - Cellmax voltage high fault","BATT1 - Cell Temp low fault","BATT1 - Cell Temp high fault","BATT1 - Charge current exceed fault","BATT1 - Discharge current exceed fault","BATT1 - I2t limit exceed fault","BATT1 - Cellmin voltage no val fault","BATT1 - Cellmin temp no val fault","BATT1 - Temp sensor SC fault","BATT1 - Temp sensor OC fault","BATT1 - CMU Communication fault","BATT1 - CMU mismatch fault","BATT1 - Max Contactor retries","BATT1 - Under current fault","BATT1 - Isolation test incomplete","BATT1 - Isolation test fail - Load mode","BATT1 - Isolation test fail - Read mode"];
+		var dem_Frame10 = ["BATT2 - Cellmin voltage low fault","BATT2 - Cellmax voltage high fault","BATT2 - Cell Temp low fault","BATT2 - Cell Temp high fault","BATT2 - Charge current exceed fault","BATT2 - Discharge current exceed fault","BATT2 - I2t limit exceed fault","BATT2 - Cellmin voltage no val fault","BATT2 - Cellmin temp no val fault","BATT2 - Temp sensor SC fault","BATT2 - Temp sensor OC fault","BATT2 - CMU Communication fault","BATT2 - CMU mismatch fault","BATT2 - Max Contactor retries","BATT2 - Under current fault","BATT2 - Isolation test incomplete","BATT2 - Isolation test fail - Load mode","BATT2 - Isolation test fail - Read mode"];
+		var dem_Frame11 = ["BATT3 - Cellmin voltage low fault","BATT3 - Cellmax voltage high fault","BATT3 - Cell Temp low fault","BATT3 - Cell Temp high fault","BATT3 - Charge current exceed fault","BATT3 - Discharge current exceed fault","BATT3 - I2t limit exceed fault","BATT3 - Cellmin voltage no val fault","BATT3 - Cellmin temp no val fault","BATT3 - Temp sensor SC fault","BATT3 - Temp sensor OC fault","BATT3 - CMU Communication fault","BATT3 - CMU mismatch fault","BATT3 - Max Contactor retries","BATT3 - Under current fault","BATT3 - Isolation test incomplete","BATT3 - Isolation test fail - Load mode","BATT3 - Isolation test fail - Read mode"];
+		var dem_Frame12 = ["BATT4 - Cellmin voltage low fault","BATT4 - Cellmax voltage high fault","BATT4 - Cell Temp low fault","BATT4 - Cell Temp high fault","BATT4 - Charge current exceed fault","BATT4 - Discharge current exceed fault","BATT4 - I2t limit exceed fault","BATT4 - Cellmin voltage no val fault","BATT4 - Cellmin temp no val fault","BATT4 - Temp sensor SC fault","BATT4 - Temp sensor OC fault","BATT4 - CMU Communication fault","BATT4 - CMU mismatch fault","BATT4 - Max Contactor retries","BATT4 - Under current fault","BATT4 - Isolation test incomplete","BATT4 - Isolation test fail - Load mode","BATT4 - Isolation test fail - Read mode"];
+		var dem_Frame13 = ["BATT5 - Cellmin voltage low fault","BATT5 - Cellmax voltage high fault","BATT5 - Cell Temp low fault","BATT5 - Cell Temp high fault","BATT5 - Charge current exceed fault","BATT5 - Discharge current exceed fault","BATT5 - I2t limit exceed fault","BATT5 - Cellmin voltage no val fault","BATT5 - Cellmin temp no val fault","BATT5 - Temp sensor SC fault","BATT5 - Temp sensor OC fault","BATT5 - CMU Communication fault","BATT5 - CMU mismatch fault","BATT5 - Max Contactor retries","BATT5 - Under current fault","BATT5 - Isolation test incomplete","BATT5 - Isolation test fail - Load mode","BATT5 - Isolation test fail - Read mode"];
+		var dem_Frame14 = ["DCDC1 - Internal EEPROM memory fault","DCDC1 - Output is short-circuit","DCDC1 - Temperature sensor failed","DCDC1 - Overloaded power","DCDC1 - Turned off due to output OV","DCDC1 - Reverse polarity on output","DCDC1 - Input voltage under limit","DCDC1 - Input voltage over limit","DCDC1 - Output voltage under limit","DCDC1 - Output voltage over limit","DCDC1 - Output current over limit","DCDC1 - Over temperature","DCDC1 - Internal I2C bus fault","DCDC1 - CAN bus fault"];
+		var dem_Frame15 = ["DCDC2 - Internal EEPROM memory fault","DCDC2 - Output is short-circuit","DCDC2 - Temperature sensor failed","DCDC2 - Overloaded power","DCDC2 - Turned off due to output OV","DCDC2 - Reverse polarity on output","DCDC2 - Input voltage under limit","DCDC2 - Input voltage over limit","DCDC2 - Output voltage under limit","DCDC2 - Output voltage over limit","DCDC2 - Output current over limit","DCDC2 - Over temperature","DCDC2 - Internal I2C bus fault","DCDC2 - CAN bus fault"];
+		var dem_Frame16 = ["DCDC3 - Internal EEPROM memory fault","DCDC3 - Output is short-circuit","DCDC3 - Temperature sensor failed","DCDC3 - Overloaded power","DCDC3 - Turned off due to output OV","DCDC3 - Reverse polarity on output","DCDC3 - Input voltage under limit","DCDC3 - Input voltage over limit","DCDC3 - Output voltage under limit","DCDC3 - Output voltage over limit","DCDC3 - Output current over limit","DCDC3 - Over temperature","DCDC3 - Internal I2C bus fault","DCDC3 - CAN bus fault"];
+		var dem_Frame17 = ["Charger1 - AC current above max","Charger1 - Cooling circuit failure","Charger1 - HV communication erratic","Charger1 - Bulk error","Charger1 - Charger derated","Charger1 - DC output over voltage","Charger1 - Neutral cable connection problem"];
+		var dem_Frame18 = ["Charger2 - AC current above max","Charger2 - Cooling circuit failure","Charger2 - HV communication erratic","Charger2 - Bulk error","Charger2 - Charger derated","Charger2 - DC output over voltage","Charger2 - Neutral cable connection problem"];
+		var dem_Frame19 = ["CabHtr- High Voltage Over","CabHtr- High Voltage Under","CabHtr- Low Voltage Over","CabHtr- Low Voltage Under","CabHtr- Current Over","CabHtr- Temperature Over","CabHtr- PCB Temp Over","CabHtr- CAN Timeout","CabHtr- Inlet Temp Failure","CabHtr- Outlet Temp Failure","CabHtr- PCB Temp Failure","CabHtr- Current Failure","CabHtr- PWM1 Chip Failure","CabHtr- PWM2 Chip Failure","CabHtr- High Voltage Interlock Failure","CabHtr- Reverse Connection/Short Circuit","CabHtr- Dry Heating Failure","CabHtr- PWM3 Chip Failure"];
+		var dem_Frame20 = ["MotorPump - Unable to Start","MotorPump - Over-voltage Protection Shutdown","MotorPump - Under-voltage Protection Shutdown","MotorPump - Over-Temperature Protection Shutdown","MotorPump - Operating at Amperage Limit"];
+		var dem_Frame21 = ["ElecPump - Unable to Start","ElecPump - Over-voltage Protection Shutdown","ElecPump - Under-voltage Protection Shutdown","ElecPump - Over-Temperature Protection Shutdown","ElecPump - Operating at Amperage Limit"];
+		var dem_Frame22 = ["This is not supported at the moment"];}
+	else if (vehicleSelectValue==="Amazon - RM01_M580_R7_16"){
+		var dem_Frame1 = ["Flt1 - AC Line Temperature ORL fault","Flt2 - AC Line Temperature ORH fault","Flt3 - Accelerator Pedal 1 ORH fault","Flt4 - Accelerator Pedal 1 ORL fault","Flt5 - Estop SW Fault","Flt6 - HVIL Open Fault","Flt7 - Accelerator Pedal Plausibility fault","Flt8 - Brake Pedal ORH fault","Flt9 - Brake Pedal ORL fault","Flt10 - Compressor Pressure Transducer ORH/ Cab TSensORH fault","Flt11 - Compressor Pressure Transducer ORL/ Cab TSensORL fault","Flt12 - DC Line Temperature ORL fault","Flt13 - DC Line Temperature ORH fault","Flt14 - Evaporator 1 Thermistor ORH fault","Flt15 - Evaporator 1 Thermistor ORL fault","Flt16 - Evaporator 2 Thermistor ORH fault","Flt17 - Evaporator 2 Thermistor ORL fault","Flt18 - Evaporator 3 Thermistor ORH fault","Flt19 - Evaporator 3 Thermistor ORL fault","Flt20 - Evaporator 4 Thermistor ORH fault","Flt21 - Evaporator 4 Thermistor ORL fault","Flt22 - Radiator Thermistor ORH fault","Flt23 - Radiator Thermistor ORL fault","Flt24 - On Board Chargers Hot Fault","Flt25 - Battery 1 Suspended Fault","Flt26 - Battery 2 Suspended Fault","Flt27 - Battery 3 Suspended Fault","Flt28 - Battery 4 Suspended Fault","Flt29 - Battery Compressor Pressure Low Fault","Flt30 - Battery 1 Fault","Flt31 - Battery 2 Fault","Flt32 - Battery 3 Fault"];
+		var dem_Frame2 = ["Flt33 - Battery 4 Fault","Flt34 - PWR Cont1 Close Fault","Flt35 - PWR Cont2 Close Fault","Flt36 - PWR Cont3 Close Fault","Flt37 - PWR Cont4 Close Fault","Flt38 - Battery Too Hot fault","Flt39 - Battery Delta SOC limp fault","Flt40 - Battery Delta SOC warn fault","Flt41 - Number of battery connected below thershold - Limp Home fault","Flt42 - SOC below theshold - Limp Home fault","Flt43 - Battery 1 Current Message Timeout fault","Flt44 - Battery 1 Data Message Timeout fault","Flt45 - Battery 1 Status Message Timeout fault","Flt46 - Battery 1 Voltage Message Timeout fault","Flt47 - Battery 2 Current Message Timeout fault","Flt48 - Battery 2 Data Message Timeout fault","Flt49 - Battery 2 Status Message Timeout fault","Flt50 - Battery 2 Voltage Message Timeout fault","Flt51 - Battery 3 Current Message Timeout fault","Flt52 - Battery 3 Data Message Timeout fault","Flt53 - Battery 3 Status Message Timeout fault","Flt54 - Battery 3 Voltage Message Timeout fault","Flt55 - Battery 4 Current Message Timeout fault","Flt56 - Battery 4 Data Message Timeout fault","Flt57 - Battery 4 Status Message Timeout fault","Flt58 - Battery 4 Voltage Message Timeout fault","Flt59 - Charger 1 Act1 Message Timeout fault","Flt60 - Charger 1 Act2 Message Timeout fault","Flt61 - Charger 1 Sts Message Timeout fault","Flt62 - Charger 1 Tst1 Message Timeout fault","Flt63 - Charger 1 Tst2 Message Timeout fault","Flt64 - Charger 2 Act1 Message Timeout fault"];
+		var dem_Frame3 = ["Flt65 - Charger 2 Act2 Message Timeout fault","Flt66 - Charger 2 Sts Message Timeout fault","Flt67 - Charger 2 Tst1 Message Timeout fault","Flt68 - Charger 2 Tst2 Message Timeout fault","Flt69 - DCDC1 fault","Flt70 - DCDC1 InOut Message Timeout fault","Flt71 - DCDC1 Sts Message Timeout fault","Flt72 - DCDC2 fault","Flt73 - DCDC2 InOut Message Timeout fault","Flt74 - DCDC2 Sts Message Timeout fault","Flt75 - Battery 3 contactor open fault","Flt76 - Electric Coolant Pump fault","Flt77 - Electric Coolant Pump Sts Message Timeout fault","Flt78 - Motor fault","Flt79 - MCU Command Response 1 Message Timeout fault","Flt80 - MCU Command Response 2 Message Timeout fault","Flt81 - MCU Event Info Message Timeout fault","Flt82 - MCU Info 1 Message Timeout fault","Flt83 - MCU Info 2 Message Timeout fault","Flt84 - MCU Regen Derate fault","Flt85 - MCU Thermal Message Timeout fault","Flt86 - MCU Traction Derate fault","Flt87 - Motor Coolant Pump fault","Flt88 - Motor Coolant Pump Sts Message Timeout fault","Flt89 - Battery 1 contactor open fault","Flt90 - Trip Reset Message Timeout fault","Flt91 - Battery 2 contactor open fault","Flt92 - ABS EBC2 Message Timeout fault","Flt93 - Electronic Park Brake Current Sensor Fail fault","Flt94 - Shifter fault","Flt95 - Shifter Sts Message Timeout fault","Flt96 - ABS TSC1 Message Timeout fault"];
+		var dem_Frame4 = ["Flt97 - Techmore Volt1 Message Timeout fault","Flt98 - ABS WhlSpdInfo Message Timeout fault","Flt99 - Charging Derated fault","Flt100 - Charging Stopped Exit fault","Flt101 - Radiator Temperature above stop threshold fault","Flt102 - Radiator Temperature above warn threshold fault","Flt103 - DC contactor Welded fault","Flt104 - 24V battery drain - Stop Fault","Flt105 - 24V battery drain - Warn Fault","Flt106 - CAN 1 communication fault","Flt107 - CAN 2 communication fault","Flt108 - CAN 3 communication fault","Flt109 - CAN 4 communication fault","Flt110 - VCU reference ground A fault","Flt111 - VCU reference battery A fault","Flt112 - VCU reference ground B fault","Flt113 - VCU reference battery B fault","Flt114 - HVIL Open Impact fault","Flt115 - TM4 Motor Temperature above warn threshold fault","Flt116 - CAB AC Contactor Relay fault","Flt117 - CAB Compressor fan Relay fault","Flt118 - Condensor fan Relay fault","Flt119 - BMS Relay fault","Flt120 - Charge Enable Relay fault","Flt121 - Charge port lock forward relay fault","Flt122 - Charge port lock reverse relay fault","Flt123 - Battery Compressor fan Relay fault","Flt124 - DC negative contactor feedback fault","Flt125 - DC positive contactor feedback fault","Flt126 - Cab Comp Pressure low/ Cab Comp Cmd fault","Flt127 - Evaporator 1 medium speed Relay fault","Flt128 - Evaporator 1 high speed Relay fault"];
+		var dem_Frame5 = ["Flt129 - Evaporator 2 medium speed Relay fault","Flt130 - Evaporator 2 high speed Relay fault","Flt131 - Evaporator 3 medium speed Relay fault","Flt132 - Evaporator 3 high speed Relay fault","Flt133 - Evaporator 4 medium speed Relay fault","Flt134 - Evaporator 4 high speed Relay fault","Flt135 - HVAC Contactor Relay fault","Flt136 - 12V Ignition Relay fault","Flt137 - Radiator Fan Relay fault","Flt138 - Compressor Speed Command fault","Flt139 - BMS1 Initialization fault","Flt140 - BMS2 Initialization fault","Flt141 - BMS3 Initialization fault","Flt142 - BMS4 Initialization fault","Flt143 - Compressor Initialization 1 fault","Flt144 - Compressor Initialization 2 fault","Flt145 - All Contactor Close fault","Flt146 - All Contactor Open fault","Flt147 - Contactor Initialization fault","Flt148 - Electric Coolant Pump Initialization fault","Flt149 - Motor Coolant Pump Initialization fault","Flt150 - DCDC 1 700 to 24 Initialization fault","Flt151 - DCDC 2 700 to 24 Initialization fault","Flt152 - High Voltage Stable fault","Flt153 - DC Contactor Relay Closed fault","Flt154 - Battery 1 Thermistor OOR","Flt155 - Battery 2 Thermistor OOR","Flt156 - Battery 3 Thermistor OOR","Flt157 - Battery 4 Thermistor OOR","Flt158 - E- Stop fault","Flt159 - Battery Compressor fault 1","Flt160 - Battery Compressor fault 2"];
+		var dem_Frame6 = ["Flt161 - 12v Supply fault (Warn/Stop)","Flt162 - Amient Temperature Sensor ORH fault","Flt163 - Amient Temperature Sensor ORL fault","Flt164 - CAB Compressor Pressure Transducer ORH fault","Flt165 - CAB Compressor Pressure Transducer ORL fault","Flt166 - CAB Heater temperature ORH fault","Flt167 - CAB Heater temperature ORL fault","Flt168 - EPB Disengage Relay fault","Flt169 - EPB Engage Relay fault","Flt170 - EPB Safety Relay fault","Flt171 - 24V Ignition Relay fault","Flt172 - ABS Ignition Relay fault","Flt173 - Power Steering Pump Ignition Relay fault","Flt174 - Pricol Pump Ignition Relay fault","Flt175 - Radiator Fan 2 Relay fault","Flt176 - Regen Light Relay fault","Flt177 - Reverse Light Relay fault","Flt178 - EPB Stop fault","Flt179 - EPB Warn fault","Flt180 - CAB Compressure Speed Command fault","Flt181 - Pricol Pump Speed Command fault","Flt182 - CAB Heater PTCSts0 Message Timeout fault","Flt183 - CAB Heater PTCSts1 Message Timeout fault","Flt184 - Power Steering Pump Over Temperature fault","Flt185 - Power Steering Pump fault","Flt186 - Battery 1 operation fault","Flt187 - Battery 2 operation fault","Flt188 - Battery 3 operation fault","Flt189 - Battery 4 operation fault","Flt190 - High Voltage below minimum thershold fault","Flt191 - Number of battery connected below thershold fault","Flt192 - Battery 4 Contactor fault"];
+		var dem_Frame7 = ["Flt193 - Cab Htr Fault","Flt194 - VCU Sender CANmsg Timeout","Flt195 - VCU Sender CANmsg Timeout","Flt196 - Diagnostic Tool CANmsg Timeout","Flt197 - APP2 ORH flt","Flt198 - Cab Comp1 fault","Flt199 - Cab Comp2 fault","Flt200 - APP2 ORL fault","Flt201 - Batt1 Error Cnt","Flt202 - Batt2 Error Cnt","Flt203 - Batt3 Error Cnt","Flt204 - Batt4 Error Cnt","Flt205 - Comp Init2 Fault"];
+		var dem_Frame8 = ["This is not supported at the moment"];
+		var dem_Frame9 = ["BATT1 - Cellmin voltage low fault","BATT1 - Cellmax voltage high fault","BATT1 - Cell Temp low fault","BATT1 - Cell Temp high fault","BATT1 - Charge current exceed fault","BATT1 - Discharge current exceed fault","BATT1 - I2t limit exceed fault","BATT1 - Cellmin voltage no val fault","BATT1 - Cellmin temp no val fault","BATT1 - Temp sensor SC fault","BATT1 - Temp sensor OC fault","BATT1 - CMU Communication fault","BATT1 - CMU mismatch fault","BATT1 - Max Contactor retries","BATT1 - Under current fault","BATT1 - Isolation test incomplete","BATT1 - Isolation test fail - Load mode","BATT1 - Isolation test fail - Read mode"];
+		var dem_Frame10 = ["BATT2 - Cellmin voltage low fault","BATT2 - Cellmax voltage high fault","BATT2 - Cell Temp low fault","BATT2 - Cell Temp high fault","BATT2 - Charge current exceed fault","BATT2 - Discharge current exceed fault","BATT2 - I2t limit exceed fault","BATT2 - Cellmin voltage no val fault","BATT2 - Cellmin temp no val fault","BATT2 - Temp sensor SC fault","BATT2 - Temp sensor OC fault","BATT2 - CMU Communication fault","BATT2 - CMU mismatch fault","BATT2 - Max Contactor retries","BATT2 - Under current fault","BATT2 - Isolation test incomplete","BATT2 - Isolation test fail - Load mode","BATT2 - Isolation test fail - Read mode"];
+		var dem_Frame11 = ["BATT3 - Cellmin voltage low fault","BATT3 - Cellmax voltage high fault","BATT3 - Cell Temp low fault","BATT3 - Cell Temp high fault","BATT3 - Charge current exceed fault","BATT3 - Discharge current exceed fault","BATT3 - I2t limit exceed fault","BATT3 - Cellmin voltage no val fault","BATT3 - Cellmin temp no val fault","BATT3 - Temp sensor SC fault","BATT3 - Temp sensor OC fault","BATT3 - CMU Communication fault","BATT3 - CMU mismatch fault","BATT3 - Max Contactor retries","BATT3 - Under current fault","BATT3 - Isolation test incomplete","BATT3 - Isolation test fail - Load mode","BATT3 - Isolation test fail - Read mode"];
+		var dem_Frame12 = ["BATT4 - Cellmin voltage low fault","BATT4 - Cellmax voltage high fault","BATT4 - Cell Temp low fault","BATT4 - Cell Temp high fault","BATT4 - Charge current exceed fault","BATT4 - Discharge current exceed fault","BATT4 - I2t limit exceed fault","BATT4 - Cellmin voltage no val fault","BATT4 - Cellmin temp no val fault","BATT4 - Temp sensor SC fault","BATT4 - Temp sensor OC fault","BATT4 - CMU Communication fault","BATT4 - CMU mismatch fault","BATT4 - Max Contactor retries","BATT4 - Under current fault","BATT4 - Isolation test incomplete","BATT4 - Isolation test fail - Load mode","BATT4 - Isolation test fail - Read mode"];
+		var dem_Frame13 = ["BATT5 - Cellmin voltage low fault","BATT5 - Cellmax voltage high fault","BATT5 - Cell Temp low fault","BATT5 - Cell Temp high fault","BATT5 - Charge current exceed fault","BATT5 - Discharge current exceed fault","BATT5 - I2t limit exceed fault","BATT5 - Cellmin voltage no val fault","BATT5 - Cellmin temp no val fault","BATT5 - Temp sensor SC fault","BATT5 - Temp sensor OC fault","BATT5 - CMU Communication fault","BATT5 - CMU mismatch fault","BATT5 - Max Contactor retries","BATT5 - Under current fault","BATT5 - Isolation test incomplete","BATT5 - Isolation test fail - Load mode","BATT5 - Isolation test fail - Read mode"];
+		var dem_Frame14 = ["DCDC1 - Internal EEPROM memory fault","DCDC1 - Output is short-circuit","DCDC1 - Temperature sensor failed","DCDC1 - Overloaded power","DCDC1 - Turned off due to output OV","DCDC1 - Reverse polarity on output","DCDC1 - Input voltage under limit","DCDC1 - Input voltage over limit","DCDC1 - Output voltage under limit","DCDC1 - Output voltage over limit","DCDC1 - Output current over limit","DCDC1 - Over temperature","DCDC1 - Internal I2C bus fault","DCDC1 - CAN bus fault"];
+		var dem_Frame15 = ["DCDC2 - Internal EEPROM memory fault","DCDC2 - Output is short-circuit","DCDC2 - Temperature sensor failed","DCDC2 - Overloaded power","DCDC2 - Turned off due to output OV","DCDC2 - Reverse polarity on output","DCDC2 - Input voltage under limit","DCDC2 - Input voltage over limit","DCDC2 - Output voltage under limit","DCDC2 - Output voltage over limit","DCDC2 - Output current over limit","DCDC2 - Over temperature","DCDC2 - Internal I2C bus fault","DCDC2 - CAN bus fault"];
+		var dem_Frame16 = ["DCDC3 - Internal EEPROM memory fault","DCDC3 - Output is short-circuit","DCDC3 - Temperature sensor failed","DCDC3 - Overloaded power","DCDC3 - Turned off due to output OV","DCDC3 - Reverse polarity on output","DCDC3 - Input voltage under limit","DCDC3 - Input voltage over limit","DCDC3 - Output voltage under limit","DCDC3 - Output voltage over limit","DCDC3 - Output current over limit","DCDC3 - Over temperature","DCDC3 - Internal I2C bus fault","DCDC3 - CAN bus fault"];
+		var dem_Frame17 = ["Charger1 - AC current above max","Charger1 - Cooling circuit failure","Charger1 - HV communication erratic","Charger1 - Bulk error","Charger1 - Charger derated","Charger1 - DC output over voltage","Charger1 - Neutral cable connection problem"];
+		var dem_Frame18 = ["Charger2 - AC current above max","Charger2 - Cooling circuit failure","Charger2 - HV communication erratic","Charger2 - Bulk error","Charger2 - Charger derated","Charger2 - DC output over voltage","Charger2 - Neutral cable connection problem"];
+		var dem_Frame19 = ["CabHtr- High Voltage Over","CabHtr- High Voltage Under","CabHtr- Low Voltage Over","CabHtr- Low Voltage Under","CabHtr- Current Over","CabHtr- Temperature Over","CabHtr- PCB Temp Over","CabHtr- CAN Timeout","CabHtr- Inlet Temp Failure","CabHtr- Outlet Temp Failure","CabHtr- PCB Temp Failure","CabHtr- Current Failure","CabHtr- PWM1 Chip Failure","CabHtr- PWM2 Chip Failure","CabHtr- High Voltage Interlock Failure","CabHtr- Reverse Connection/Short Circuit","CabHtr- Dry Heating Failure","CabHtr- PWM3 Chip Failure"];
+		var dem_Frame20 = ["MotorPump - Unable to Start","MotorPump - Over-voltage Protection Shutdown","MotorPump - Under-voltage Protection Shutdown","MotorPump - Over-Temperature Protection Shutdown","MotorPump - Operating at Amperage Limit"];
+		var dem_Frame21 = ["ElecPump - Unable to Start","ElecPump - Over-voltage Protection Shutdown","ElecPump - Under-voltage Protection Shutdown","ElecPump - Over-Temperature Protection Shutdown","ElecPump - Operating at Amperage Limit"];
+		var dem_Frame22 = ["This is not supported at the moment"];}
+	else if (vehicleSelectValue==="R8"){
+		var dem_Frame1 = ["Flt1 - AC Line Temperature ORL fault","Flt2 - AC Line Temperature ORH fault","Flt3 - Accelerator Pedal 1 ORH fault","Flt4 - Accelerator Pedal 1 ORL fault","Flt5 - Estop SW Fault","Flt6 - HVIL Open Fault","Flt7 - Accelerator Pedal Plausibility fault","Flt8 - Brake Pedal ORH fault","Flt9 - Brake Pedal ORL fault","Flt10 - Compressor Pressure Transducer ORH/ Cab TSensORH fault","Flt11 - Compressor Pressure Transducer ORL/ Cab TSensORL fault","Flt12 - DC Line Temperature ORL fault","Flt13 - DC Line Temperature ORH fault","Flt14 - Evaporator 1 Thermistor ORH fault","Flt15 - Evaporator 1 Thermistor ORL fault","Flt16 - Evaporator 2 Thermistor ORH fault","Flt17 - Evaporator 2 Thermistor ORL fault","Flt18 - Evaporator 3 Thermistor ORH fault","Flt19 - Evaporator 3 Thermistor ORL fault","Flt20 - Evaporator 4 Thermistor ORH fault","Flt21 - Evaporator 4 Thermistor ORL fault","Flt22 - Radiator Thermistor ORH fault","Flt23 - Radiator Thermistor ORL fault","Flt24 - On Board Chargers Hot Fault","Flt25 - Battery 1 Suspended Fault","Flt26 - Battery 2 Suspended Fault","Flt27 - Battery 3 Suspended Fault","Flt28 - Battery 4 Suspended Fault","Flt29 - Battery Compressor Pressure Low Fault","Flt30 - Battery 1 Fail to Connect","Flt31 - Battery 2 Fail to Connect","Flt32 - Battery 3 Fail to Connect"];
+		var dem_Frame2 = ["Flt33 - Battery 4 Fail to Connect","Flt34 - Batt1 Contactor Not Closing/PWR Cont1 Close flt","Flt35 - Batt2 Contactor Not Closing/PWR Cont2 Close flt","Flt36 - Batt3 Contactor Not Closing/PWR Cont3 Close flt","Flt37 - Batt4 Contactor Not Closing/PWR Cont4 Close flt","Flt38 - Battery Too Hot fault","Flt39 - Battery Delta SOC limp fault","Flt40 - Battery Delta SOC warn fault","Flt41 - Number of battery connected below thershold - Limp Home fault","Flt42 - SOC below theshold - Limp Home","Flt43 - Battery 1 Current Message Timeout fault","Flt44 - Battery 1 Data Message Timeout fault","Flt45 - Battery 1 Status Message Timeout fault","Flt46 - Battery 1 Voltage Message Timeout fault","Flt47 - Battery 2 Current Message Timeout fault","Flt48 - Battery 2 Data Message Timeout fault","Flt49 - Battery 2 Status Message Timeout fault","Flt50 - Battery 2 Voltage Message Timeout fault","Flt51 - Battery 3 Current Message Timeout fault","Flt52 - Battery 3 Data Message Timeout fault","Flt53 - Battery 3 Status Message Timeout fault","Flt54 - Battery 3 Voltage Message Timeout fault","Flt55 - Battery 4 Current Message Timeout fault","Flt56 - Battery 4 Data Message Timeout fault","Flt57 - Battery 4 Status Message Timeout fault","Flt58 - Battery 4 Voltage Message Timeout fault","Flt59 - Charger 1 Act1 Message Timeout fault","Flt60 - Charger 1 Act2 Message Timeout fault","Flt61 - Charger 1 Sts Message Timeout fault","Flt62 - Charger 1 Tst1 Message Timeout fault","Flt63 - Charger 1 Tst2 Message Timeout fault","Flt64 - Charger 2 Act1 Message Timeout fault"];
+		var dem_Frame3 = ["Flt65 - Charger 2 Act2 Message Timeout fault","Flt66 - Charger 2 Sts Message Timeout fault","Flt67 - Charger 2 Tst1 Message Timeout fault","Flt68 - Charger 2 Tst2 Message Timeout fault","Flt69 - DCDC1 fault","Flt70 - DCDC1 InOut Message Timeout fault","Flt71 - DCDC1 Sts Message Timeout fault","Flt72 - DCDC2 fault","Flt73 - DCDC2 InOut Message Timeout fault","Flt74 - DCDC2 Sts Message Timeout fault","Flt75 - Battery 3 contactor open fault","Flt76 - Electric Coolant Pump fault","Flt77 - Electric Coolant Pump Sts Message Timeout fault","Flt78 - Motor fault","Flt79 - MCU Command Response 1 Message Timeout fault","Flt80 - MCU Command Response 2 Message Timeout fault","Flt81 - MCU Event Info Message Timeout fault","Flt82 - MCU Info 1 Message Timeout fault","Flt83 - MCU Info 2 Message Timeout fault","Flt84 - MCU Regen Derate fault","Flt85 - MCU Thermal Message Timeout fault","Flt86 - MCU Traction Derate fault","Flt87 - Motor Coolant Pump fault","Flt88 - Motor Coolant Pump Sts Message Timeout fault","Flt89 - Battery 1 contactor open fault","Flt90 - Trip Reset Message Timeout fault","Flt91 - Battery 2 contactor open fault","Flt92 - ABS EBC2 Message Timeout fault","Flt93 - Electronic Park Brake Current Sensor Fail fault","Flt94 - Shifter fault","Flt95 - Shifter Sts Message Timeout fault","Flt96 - ABS TSC1 Message Timeout fault"];
+		var dem_Frame4 = ["Flt97 - Techmore Volt1 Message Timeout fault","Flt98 - ABS WhlSpdInfo Message Timeout fault","Flt99 - Charging Derated fault","Flt100 - Charging Stopped Exit fault","Flt101 - Radiator Temperature above stop threshold fault","Flt102 - Radiator Temperature above warn threshold fault","Flt103 - DC contactor Welded fault","Flt104 - 24V battery drain - Stop Fault","Flt105 - 24V battery drain - Warn Fault","Flt106 - CAN 1 communication fault","Flt107 - CAN 2 communication fault","Flt108 - CAN 3 communication fault","Flt109 - CAN 4 communication fault","Flt110 - VCU reference ground A fault","Flt111 - VCU reference battery A fault","Flt112 - VCU reference ground B fault","Flt113 - VCU reference battery B fault","Flt114 - HVIL Open Impact fault","Flt115 - TM4 Motor Temperature above warn threshold fault","Flt116 - CAB AC Contactor Relay fault","Flt117 - CAB AC Compressor Relay fault","Flt118 - Condensor fan Relay fault","Flt119 - BMS Relay fault","Flt120 - Charge Enable Relay fault","Flt121 - Charge port lock forward relay fault","Flt122 - Charge port lock reverse relay fault","Flt123 - Battery Compressor fan Relay fault","Flt124 - DC negative contactor feedback fault","Flt125 - DC positive contactor feedback fault","Flt126 - Cab Comp Pressure low/ Cab Comp Cmd fault","Flt127 - Evaporator 1 medium speed Relay fault","Flt128 - Evaporator 1 high speed Relay fault"];
+		var dem_Frame5 = ["Flt129 - Evaporator 2 medium speed Relay fault","Flt130 - Evaporator 2 high speed Relay fault","Flt131 - Evaporator 3 medium speed Relay fault","Flt132 - Evaporator 3 high speed Relay fault","Flt133 - Evaporator 4 medium speed Relay fault","Flt134 - Evaporator 4 high speed Relay fault","Flt135 - HVAC Contactor Relay fault","Flt136 - 12V Ignition Relay fault","Flt137 - Radiator Fan Relay fault","Flt138 - Compressor Speed Command fault","Flt139 - BMS1 Initialization fault","Flt140 - BMS2 Initialization fault","Flt141 - BMS3 Initialization fault","Flt142 - BMS4 Initialization fault","Flt143 - Compressor Initialization 1 fault","Flt144 - NVM Bad Update fault","Flt145 - All Contactor Close fault","Flt146 - All Contactor Open fault","Flt147 - Contactor Initialization fault","Flt148 - Electric Coolant Pump Initialization fault","Flt149 - Motor Coolant Pump Initialization fault","Flt150 - DCDC 1 700 to 24 Initialization fault","Flt151 - DCDC 2 700 to 24 Initialization fault","Flt152 - High Voltage Stable fault","Flt153 - DC Contactor Relay Closed fault","Flt154 - Battery 1 Thermistor OOR","Flt155 - Battery 2 Thermistor OOR","Flt156 - Battery 3 Thermistor OOR","Flt157 - Battery 4 Thermistor OOR","Flt158 - E- Stop fault","Flt159 - Battery Compressor fault 1","Flt160 - Battery Compressor fault 2"];
+		var dem_Frame6 = ["Flt161 - 12v Supply fault (Warn/Stop)","Flt162 - Amient Temperature Sensor ORH fault","Flt163 - Amient Temperature Sensor ORL fault","Flt164 - CAB Compressor Pressure Transducer ORH fault","Flt165 - CAB Compressor Pressure Transducer ORL fault","Flt166 - CAB Heater temperature ORH fault","Flt167 - CAB Heater temperature ORL fault","Flt168 - EPB Disengage Relay fault","Flt169 - EPB Engage Relay fault","Flt170 - EPB Safety Relay fault","Flt171 - 24V Ignition Relay fault","Flt172 - ABS Ignition Relay fault","Flt173 - Power Steering Pump Ignition Relay fault","Flt174 - Pricol Pump Ignition Relay fault","Flt175 - Radiator Fan 2 Relay fault","Flt176 - Regen Light Relay fault","Flt177 - Reverse Light Relay fault","Flt178 - EPB Stop fault","Flt179 - EPB Warn fault","Flt180 - CAB Compressure Speed Command fault","Flt181 - Pricol Pump Speed Command fault","Flt182 - CAB Heater PTCSts0 Message Timeout fault","Flt183 - CAB Heater PTCSts1 Message Timeout fault","Flt184 - Power Steering Pump Over Temperature fault","Flt185 - Power Steering Pump fault","Flt186 - Battery 1 operation fault","Flt187 - Battery 2 operation fault","Flt188 - Battery 3 operation fault","Flt189 - Battery 4 operation fault","Flt190 - High Voltage below minimum thershold fault","Flt191 - Number of battery connected below thershold fault","Flt192 - Battery 4 Contactor fault"];
+		var dem_Frame7 = ["Flt193 - Cab Htr Fault","Flt194 - VCU Receiver CANmsg Timeout","Flt195 - VCU Sender CANmsg Timeout","Flt196 - Diagnostic Tool CANmsg Timeout","Flt197 - APP2 ORH flt","Flt198 - Cab Comp1 fault","Flt199 - Cab Comp2 fault","Flt200 - APP2 ORL fault","Flt201 - Batt1 Error Cnt Msg CAN timeout","Flt202 - Batt2 Error Cnt Msg CAN timeout","Flt203 - Batt3 Error Cnt Msg CAN timeout","Flt204 - Batt4 Error CntMsg CAN timeout","Flt205 - PWR Component Initialization Fault","Flt206 - MCU EStop","Flt207 - NVM Read Signal Fail","Flt208 - BTMS Compressor fault","Flt209 - BTMS Heater Fault","Flt210 - Isolation Warning Fault","Flt211 - Isolation Major Fault","Flt212 - BattDiag - Inrush Current High fault","Flt213 - BattDiag - Inrush Voltage High","Flt214 - Cab compressor communication fault","Flt215 - AC Compressor Internal fault","Flt216 - Isolation HW CAN timeout","Flt217 - Isolation monitor Disable fault","Flt218 - Isolation monitoring Hardware Error Fault","Flt219 - High Voltage Bus Diagnostics Fault", "Flt220 - BTMS - Condenser fault", "Flt221 - Precharge Timeout Fault", "Flt222 - DC Exit Reason Fault", "Flt223 - NVM Read Plausibility Fault", "Flt224 - BTMS - Cooling Fault"];
+		var dem_Frame8 = ["Flt225 - BTMS:Heating Fault","Flt226 - BTMS:Distribution Fault","Flt227 - Batt 1: Positive Contactor Stuck Open","Flt228 - Batt 2: Positive Contactor Stuck Open","Flt229 - Batt 3: Positive Contactor Stuck Open","Flt230 - Batt 4: Positive Contactor Stuck Open","Flt231 - Batt 1: Negative Contactor Stuck Open","Flt232 - Batt 2: Negative Contactor Stuck Open","Flt233 - Batt 3: Negative Contactor Stuck Open","Flt234 - Batt 4: Negative Contactor Stuck Open","Flt235 - HVBD Precharge Resistor Failed","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined","Not Defined"];
+		var dem_Frame9 = ["BATT1 - Cellmin voltage low fault","BATT1 - Cellmax voltage high fault","BATT1 - Cell Temp low fault","BATT1 - Cell Temp high fault","BATT1 - Charge current exceed fault","BATT1 - Discharge current exceed fault","BATT1 - I2t limit exceed fault","BATT1 - Cellmin voltage no val fault","BATT1 - Cellmin temp no val fault","BATT1 - Temp sensor SC fault","BATT1 - Temp sensor OC fault","BATT1 - CMU Communication fault","BATT1 - CMU mismatch fault","BATT1 - Max Contactor retries","BATT1 - Under current fault","BATT1 - Isolation test incomplete","BATT1 - Isolation test fail - Load mode","BATT1 - Isolation test fail - Ready mode","BATT1 - Positive Contactor Weld","BATT1 - Negative Contactor Weld","BATT1 - Positive Feedback Missing","BATT1 - Negative Feedback Missing"];
+		var dem_Frame10 = ["BATT2 - Cellmin voltage low fault","BATT2 - Cellmax voltage high fault","BATT2 - Cell Temp low fault","BATT2 - Cell Temp high fault","BATT2 - Charge current exceed fault","BATT2 - Discharge current exceed fault","BATT2 - I2t limit exceed fault","BATT2 - Cellmin voltage no val fault","BATT2 - Cellmin temp no val fault","BATT2 - Temp sensor SC fault","BATT2 - Temp sensor OC fault","BATT2 - CMU Communication fault","BATT2 - CMU mismatch fault","BATT2 - Max Contactor retries","BATT2 - Under current fault","BATT2 - Isolation test incomplete","BATT2 - Isolation test fail - Load mode","BATT2 - Isolation test fail - Ready mode","BATT2 - Positive Contactor Weld","BATT2 - Negative Contactor Weld","BATT2 - Positive Feedback Missing","BATT2 - Negative Feedback Missing"];
+		var dem_Frame11 = ["BATT3 - Cellmin voltage low fault","BATT3 - Cellmax voltage high fault","BATT3 - Cell Temp low fault","BATT3 - Cell Temp high fault","BATT3 - Charge current exceed fault","BATT3 - Discharge current exceed fault","BATT3 - I2t limit exceed fault","BATT3 - Cellmin voltage no val fault","BATT3 - Cellmin temp no val fault","BATT3 - Temp sensor SC fault","BATT3 - Temp sensor OC fault","BATT3 - CMU Communication fault","BATT3 - CMU mismatch fault","BATT3 - Max Contactor retries","BATT3 - Under current fault","BATT3 - Isolation test incomplete","BATT3 - Isolation test fail - Load mode","BATT3 - Isolation test fail - Ready mode","BATT3 - Positive Contactor Weld","BATT3 - Negative Contactor Weld","BATT3 - Positive Feedback Missing","BATT3 - Negative Feedback Missing"];
+		var dem_Frame12 = ["BATT4 - Cellmin voltage low fault","BATT4 - Cellmax voltage high fault","BATT4 - Cell Temp low fault","BATT4 - Cell Temp high fault","BATT4 - Charge current exceed fault","BATT4 - Discharge current exceed fault","BATT4 - I2t limit exceed fault","BATT4 - Cellmin voltage no val fault","BATT4 - Cellmin temp no val fault","BATT4 - Temp sensor SC fault","BATT4 - Temp sensor OC fault","BATT4 - CMU Communication fault","BATT4 - CMU mismatch fault","BATT4 - Max Contactor retries","BATT4 - Under current fault","BATT4 - Isolation test incomplete","BATT4 - Isolation test fail - Load mode","BATT4 - Isolation test fail - Ready mode"];
+		var dem_Frame13 = ["BATT5 - Cellmin voltage low fault","BATT5 - Cellmax voltage high fault","BATT5 - Cell Temp low fault","BATT5 - Cell Temp high fault","BATT5 - Charge current exceed fault","BATT5 - Discharge current exceed fault","BATT5 - I2t limit exceed fault","BATT5 - Cellmin voltage no val fault","BATT5 - Cellmin temp no val fault","BATT5 - Temp sensor SC fault","BATT5 - Temp sensor OC fault","BATT5 - CMU Communication fault","BATT5 - CMU mismatch fault","BATT5 - Max Contactor retries","BATT5 - Under current fault","BATT5 - Isolation test incomplete","BATT5 - Isolation test fail - Load mode","BATT5 - Isolation test fail - Ready mode"];
+		var dem_Frame14 = ["DCDC1 - Internal EEPROM memory fault","DCDC1 - Output is short-circuit","DCDC1 - Temperature sensor failed","DCDC1 - Overloaded power","DCDC1 - Turned off due to output OV","DCDC1 - Reverse polarity on output","DCDC1 - Input voltage under limit","DCDC1 - Input voltage over limit","DCDC1 - Output voltage under limit","DCDC1 - Output voltage over limit","DCDC1 - Output current over limit","DCDC1 - Over temperature","DCDC1 - Internal I2C bus fault","DCDC1 - CAN bus fault"];
+		var dem_Frame15 = ["DCDC2 - Internal EEPROM memory fault","DCDC2 - Output is short-circuit","DCDC2 - Temperature sensor failed","DCDC2 - Overloaded power","DCDC2 - Turned off due to output OV","DCDC2 - Reverse polarity on output","DCDC2 - Input voltage under limit","DCDC2 - Input voltage over limit","DCDC2 - Output voltage under limit","DCDC2 - Output voltage over limit","DCDC2 - Output current over limit","DCDC2 - Over temperature","DCDC2 - Internal I2C bus fault","DCDC2 - CAN bus fault"];
+		var dem_Frame16 = ["DCDC3 - Internal EEPROM memory fault","DCDC3 - Output is short-circuit","DCDC3 - Temperature sensor failed","DCDC3 - Overloaded power","DCDC3 - Turned off due to output OV","DCDC3 - Reverse polarity on output","DCDC3 - Input voltage under limit","DCDC3 - Input voltage over limit","DCDC3 - Output voltage under limit","DCDC3 - Output voltage over limit","DCDC3 - Output current over limit","DCDC3 - Over temperature","DCDC3 - Internal I2C bus fault","DCDC3 - CAN bus fault"];
+		var dem_Frame17 = ["Charger1 - AC current above max","Charger1 - Cooling circuit failure","Charger1 - HV communication erratic","Charger1 - Bulk error","Charger1 - Charger derated","Charger1 - DC output over voltage","Charger1 - Neutral cable connection problem"];
+		var dem_Frame18 = ["Charger2 - AC current above max","Charger2 - Cooling circuit failure","Charger2 - HV communication erratic","Charger2 - Bulk error","Charger2 - Charger derated","Charger2 - DC output over voltage","Charger2 - Neutral cable connection problem"];
+		var dem_Frame19 = ["CabHtr- High Voltage Over","CabHtr- High Voltage Under","CabHtr- Low Voltage Over","CabHtr- Low Voltage Under","CabHtr- Current Over","CabHtr- Temperature Over","CabHtr- PCB Temp Over","CabHtr- CAN Timeout","CabHtr- Inlet Temp Failure","CabHtr- Outlet Temp Failure","CabHtr- PCB Temp Failure","CabHtr- Current Failure","CabHtr- PWM1 Chip Failure","CabHtr- PWM2 Chip Failure","CabHtr- High Voltage Interlock Failure","CabHtr- Reverse Connection/Short Circuit","CabHtr- Dry Heating Failure","CabHtr- PWM3 Chip Failure"];
+		var dem_Frame20 = ["MotorPump - Unable to Start","MotorPump - Over-voltage Protection Shutdown","MotorPump - Under-voltage Protection Shutdown","MotorPump - Over-Temperature Protection Shutdown","MotorPump - Operating at Amperage Limit"];
+		var dem_Frame21 = ["ElecPump - Unable to Start","ElecPump - Over-voltage Protection Shutdown","ElecPump - Under-voltage Protection Shutdown","ElecPump - Over-Temperature Protection Shutdown","ElecPump - Operating at Amperage Limit"];
+		var dem_Frame22 = ["This is not supported at the moment"];
+		var ccs_stm_info = ["Vehicle to Grid Communication OK","0B message from EVSE not received in allotted time","0B message from EVSE response code invalid","1B message from EVSE not received in allotted time","1B message from EVSE response code invalid","2B message from EVSE not received in allotted time","2B message from EVSE response code invalid","XB message from EVSE not received in allotted time","XB message from EVSE response code invalid","YB message from EVSE not received in allotted time","YB message from EVSE response code invalid","3B message from EVSE not received in allotted time","3B message from EVSE response code invalid","4B message from EVSE not received in allotted time","4B message from EVSE response code invalid","5B message from EVSE not received in allotted time","5B message from EVSE response code invalid","6B message from EVSE not received in allotted time","6B message from EVSE response code invalid","7B message from EVSE not received in allotted time","7B message from EVSE response code invalid","8B message from EVSE not received in allotted time","8B message from EVSE response code invalid","9B message from EVSE not received in allotted time","9B message from EVSE response code invalid","EVSE Energy Transfer Type Mismatch","Timeout from SLAC Communication","Timeout during Isolation Check","Timeout during Pre-charging Phase","Timeout if charge relays are not closed","Isolation failure detected by EVSE","EVSE CP Oscillator turned off","Emergency Stop set by vehicle","V2G_ERR_EVSESHUTDN_OCILLATOROFF","EVSE Maximum Voltage lower than vehicle HV (Incompatible Charger)","Charging Mode changed","Charger Port removed suddenly","EVSE Oscillator turned off","V2G_DemandExceeded","V2G_TcpCommTerminated","V2G_S2Open","DcNotEnabled"];
+		var ccs_stm_st =["Charger is disconnected","Vehicle is enabling QCA chip for digital communication","QCA SLAC communication initiation","Digital Communication initiation","Charging Session Setup","Charging Service Parameters discovery","Payment Selection","Contract Authentication/Payment Verification","EVSE Parameter identification from vehicle","Charger Lock enabled","Disabled Isolation Monitoring in vehicle","Isolation Cable check by the EVSE","Pre-charging EVSE to HV","Close contactors after pre-charge","Power delivery for all components in pre-charge","Current Transfer/Vehicle Charging","Normal Shutdown of Charging Session","Normal Shutdown - Vehicle waiting for charging current to drop to 0","Open Switch B2 to end charging session","Contactor weld detected after charging session","Opening Charge Contactors","Normal shutdown Stop session","Terminate digital communication with EVSE","Inlet Voltage below safe threshold to disconnect","Normal Shutdown - Charge Session Completed","Terminate digital communication","Opening Charge Contactors","Vehicle Shutdown Complete","Terminate digital communication","Opening Charge Contactors","Vehicle Shutdown Complete","Vehicle is identifying charging mode","Verify Switch S3 on Charger connector is closed","Close Switch S2 for charging","Charging Contactor close","Vehicle Charging/AC Energy Transfer","AC charging session end,waiting for current to reach 0A","AC charging shutdown,waiting for unplugging charger","AC Charging shutdown complete","Unexpected error during charging","10A message to stop charging,sent by vehicle","Switch S2 opened,causing stop session","Sequential charging"];
+		var cp_state = ["Pilot State Unknown", "State A - Vehicle Not Connected", "State B1 - Vehicle connected/not ready to accept energy (9V OSCILTR OFF)", "State B2 - Vehicle connected/not ready to accept energy (9V OSCILTR ON)", "State C2 - Vehicle connected/ready to accept energy (6V OSCILTR ON)", "State D2 - Vehicle connected/ready to accept energy (3V OSCILTR ON)", "State C1 - Vehicle connected/ready to accept energy (6V OSCILTR OFF)", "State D1 - Vehicle connected/ready to accept energy (3V OSCILTR OFF)", "State E - EVSE disconnected", "State F - EVSE problem (12V_OSCILTR_OFF)"];
+		var pp_state = ["Charger Connector not inserted (PROX DISCONNECTED)","Charger Connector inserted but button not pressed (PROX_CONNECTED_S3_OPEN)","Charger Connector inserted (PROX_CONNECTED_S3_CLOSE)"];
+		}
+	else{
+		var dem_Frame1 = ["Wrong Selection/ WIP"];
+		var dem_Frame2 = ["Wrong Selection/ WIP"];
+		var dem_Frame3 = ["Wrong Selection/ WIP"];
+		var dem_Frame4 = ["Wrong Selection/ WIP"];
+		var dem_Frame5 = ["Wrong Selection/ WIP"];
+		var dem_Frame6 = ["Wrong Selection/ WIP"];
+		var dem_Frame7 = ["Wrong Selection/ WIP"];
+		var dem_Frame8 = ["Wrong Selection/ WIP"];}
+		
+	var F1 = document.getElementById("Frame1").value;
+	var F2 = document.getElementById("Frame2").value;
+	var F3 = document.getElementById("Frame3").value;
+	var F4 = document.getElementById("Frame4").value;
+	var F5 = document.getElementById("Frame5").value;
+	var F6 = document.getElementById("Frame6").value;
+	var F7 = document.getElementById("Frame7").value;
+	var F8 = document.getElementById("Frame8").value;
+	var F9 = document.getElementById("Frame9").value;
+	var F10 = document.getElementById("Frame10").value;
+	var F11 = document.getElementById("Frame11").value;
+	var F12 = document.getElementById("Frame12").value;
+	var F13 = document.getElementById("Frame13").value;
+	var F14 = document.getElementById("Frame14").value;
+	var F15 = document.getElementById("Frame15").value;
+	var F16 = document.getElementById("Frame16").value;
+	var F17 = document.getElementById("Frame17").value;
+	var F18 = document.getElementById("Frame18").value;
+	var F19 = document.getElementById("Frame19").value;
+	var F20 = document.getElementById("Frame20").value;
+	var F21 = document.getElementById("Frame21").value;
+	var F22 = document.getElementById("Frame22").value;
+	var F23 = document.getElementById("Frame23").value;
+	var F24 = document.getElementById("Frame24").value;
+	var F25 = document.getElementById("Frame25").value;
+	var F26 = document.getElementById("Frame26").value;	
+	
+	var F1_array = Array.from(String(dec2bin(F1)), Number)
+	var F2_array = Array.from(String(dec2bin(F2)), Number)
+	var F3_array = Array.from(String(dec2bin(F3)), Number)
+	var F4_array = Array.from(String(dec2bin(F4)), Number)
+	var F5_array = Array.from(String(dec2bin(F5)), Number)
+	var F6_array = Array.from(String(dec2bin(F6)), Number)	
+	var F7_array = Array.from(String(dec2bin(F7)), Number)
+	var F8_array = Array.from(String(dec2bin(F8)), Number)
+	var F9_array = Array.from(String(dec2bin(F9)), Number)
+	var F10_array = Array.from(String(dec2bin(F10)), Number)
+	var F11_array = Array.from(String(dec2bin(F11)), Number)
+	var F12_array = Array.from(String(dec2bin(F12)), Number)
+	var F13_array = Array.from(String(dec2bin(F13)), Number)
+	var F14_array = Array.from(String(dec2bin(F14)), Number)
+	var F15_array = Array.from(String(dec2bin(F15)), Number)
+	var F16_array = Array.from(String(dec2bin(F16)), Number)
+	var F17_array = Array.from(String(dec2bin(F17)), Number)
+	var F18_array = Array.from(String(dec2bin(F18)), Number)
+	var F19_array = Array.from(String(dec2bin(F19)), Number)
+	var F20_array = Array.from(String(dec2bin(F20)), Number)
+	var F21_array = Array.from(String(dec2bin(F21)), Number)
+	var F22_array = Array.from(String(dec2bin(F22)), Number)
+	var F23_array = Array.from(String((F23)), Number)
+	var F24_array = Array.from(String((F24)), Number)
+	var F25_array = Array.from(String((F25)), Number)
+	var F26_array = Array.from(String((F26)), Number)
+	
+	if (F1>=0){
+		for (var i=F1_array.length-1; i >= 0; i--){
+			if (F1_array[i] >0){
+				document.getElementById("para1").innerHTML += dem_Frame1[F1_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para1").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F2>=0){
+		for (var i=F2_array.length-1; i >= 0; i--){
+			if (F2_array[i] >0){
+				document.getElementById("para2").innerHTML += dem_Frame2[F2_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para2").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F3>=0){
+		for (var i=F3_array.length-1; i >= 0; i--){
+			if (F3_array[i] >0){
+				document.getElementById("para3").innerHTML += dem_Frame3[F3_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para3").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F4>=0){
+		for (var i=F4_array.length-1; i >= 0; i--){
+			if (F4_array[i] >0){
+				document.getElementById("para4").innerHTML += dem_Frame4[F4_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para4").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F5>=0){
+		for (var i=F5_array.length-1; i >= 0; i--){
+			if (F5_array[i] >0){
+				document.getElementById("para5").innerHTML += dem_Frame5[F5_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para5").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F6>=0){
+		for (var i=F6_array.length-1; i >= 0; i--){
+			if (F6_array[i] >0){
+				document.getElementById("para6").innerHTML += dem_Frame6[F6_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para6").innerHTML = "Enter number greater than 0/ no faults";
+	}
+
+	if (F7>=0){
+		for (var i=F7_array.length-1; i >= 0; i--){
+			if (F7_array[i] >0){
+				document.getElementById("para7").innerHTML += dem_Frame7[F7_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para7").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F8>=0){
+		for (var i=F8_array.length-1; i >= 0; i--){
+			if (F8_array[i] >0){
+				document.getElementById("para8").innerHTML += dem_Frame8[F8_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para8").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F9>=0){
+		for (var i=F9_array.length-1; i >= 0; i--){
+			if (F9_array[i] >0){
+				document.getElementById("para9").innerHTML += dem_Frame9[F9_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para9").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F10>=0){
+		for (var i=F10_array.length-1; i >= 0; i--){
+			if (F10_array[i] >0){
+				document.getElementById("para10").innerHTML += dem_Frame10[F10_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para10").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F11>=0){
+		for (var i=F11_array.length-1; i >= 0; i--){
+			if (F11_array[i] >0){
+				document.getElementById("para11").innerHTML += dem_Frame11[F11_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para11").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F12>=0){
+		for (var i=F12_array.length-1; i >= 0; i--){
+			if (F12_array[i] >0){
+				document.getElementById("para12").innerHTML += dem_Frame12[F12_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para12").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F13>=0){
+		for (var i=F13_array.length-1; i >= 0; i--){
+			if (F13_array[i] >0){
+				document.getElementById("para13").innerHTML += dem_Frame13[F13_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para13").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F14>=0){
+		for (var i=F14_array.length-1; i >= 0; i--){
+			if (F14_array[i] >0){
+				document.getElementById("para14").innerHTML += dem_Frame14[F14_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para14").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F15>=0){
+		for (var i=F15_array.length-1; i >= 0; i--){
+			if (F15_array[i] >0){
+				document.getElementById("para15").innerHTML += dem_Frame15[F15_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para15").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F16>=0){
+		for (var i=F16_array.length-1; i >= 0; i--){
+			if (F16_array[i] >0){
+				document.getElementById("para16").innerHTML += dem_Frame16[F16_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para16").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F17>=0){
+		for (var i=F17_array.length-1; i >= 0; i--){
+			if (F17_array[i] >0){
+				document.getElementById("para17").innerHTML += dem_Frame17[F17_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para17").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F18>=0){
+		for (var i=F18_array.length-1; i >= 0; i--){
+			if (F18_array[i] >0){
+				document.getElementById("para18").innerHTML += dem_Frame18[F18_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para18").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F19>=0){
+		for (var i=F19_array.length-1; i >= 0; i--){
+			if (F19_array[i] >0){
+				document.getElementById("para19").innerHTML += dem_Frame19[F19_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para19").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F20>=0){
+		for (var i=F20_array.length-1; i >= 0; i--){
+			if (F20_array[i] >0){
+				document.getElementById("para20").innerHTML += dem_Frame20[F20_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para20").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F21>=0){
+		for (var i=F21_array.length-1; i >= 0; i--){
+			if (F21_array[i] >0){
+				document.getElementById("para21").innerHTML += dem_Frame21[F21_array.length-i-1]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para21").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F22>=0){
+		for (var i=F22_array.length-1; i >= 0; i--){
+			if (F22_array[i] >0){
+				document.getElementById("para22").innerHTML += dem_Frame22[0]+"<br>";
+			}
+		}
+	}else{
+		document.getElementById("para22").innerHTML = "Enter number greater than 0/ no faults";
+	}
+	if (F23 != []){
+				document.getElementById("para23").innerHTML = ccs_stm_st[F23]+"<br>";
+	}
+	
+	if (F24 != []){
+				document.getElementById("para24").innerHTML = ccs_stm_info[F24]+"<br>";
+	}
+	if (F25 != []){
+				document.getElementById("para25").innerHTML = cp_state[F25]+"<br>";
+	}
+	if (F26 != []){
+				document.getElementById("para26").innerHTML = pp_state[F26]+"<br>";
+	}
+}
+function dec2bin(dec){
+    return (dec >>> 0).toString(2);
+}
+function clearHTML(){
+	document.getElementById("para1").innerHTML = "";
+	document.getElementById("para2").innerHTML = "";
+	document.getElementById("para3").innerHTML = "";
+	document.getElementById("para4").innerHTML = "";
+	document.getElementById("para5").innerHTML = "";
+	document.getElementById("para6").innerHTML = "";
+	document.getElementById("para7").innerHTML = "";
+	document.getElementById("para8").innerHTML = "";
+	document.getElementById("para9").innerHTML = "";
+	document.getElementById("para10").innerHTML = "";
+	document.getElementById("para11").innerHTML = "";
+	document.getElementById("para12").innerHTML = "";
+	document.getElementById("para13").innerHTML = "";
+	document.getElementById("para14").innerHTML = "";
+	document.getElementById("para15").innerHTML = "";
+	document.getElementById("para16").innerHTML = "";
+	document.getElementById("para17").innerHTML = "";
+	document.getElementById("para18").innerHTML = "";
+	document.getElementById("para19").innerHTML = "";
+	document.getElementById("para20").innerHTML = "";
+	document.getElementById("para21").innerHTML = "";
+	document.getElementById("para22").innerHTML = "";
+	document.getElementById("para23").innerHTML = "";
+	document.getElementById("para24").innerHTML = "";
+	document.getElementById("para25").innerHTML = "";
+	document.getElementById("para26").innerHTML = "";
+}
+function clearInput(){
+	document.getElementById("Frame1").value = "";
+	document.getElementById("Frame2").value = "";
+	document.getElementById("Frame3").value = "";
+	document.getElementById("Frame4").value = "";
+	document.getElementById("Frame5").value = "";
+	document.getElementById("Frame6").value = "";
+	document.getElementById("Frame7").value = "";
+	document.getElementById("Frame8").value = "";
+	document.getElementById("Frame9").value = "";
+	document.getElementById("Frame10").value = "";
+	document.getElementById("Frame11").value = "";
+	document.getElementById("Frame12").value = "";
+	document.getElementById("Frame13").value = "";
+	document.getElementById("Frame14").value = "";
+	document.getElementById("Frame15").value = "";
+	document.getElementById("Frame16").value = "";
+	document.getElementById("Frame17").value = "";
+	document.getElementById("Frame18").value = "";
+	document.getElementById("Frame19").value = "";
+	document.getElementById("Frame20").value = "";
+	document.getElementById("Frame21").value = "";
+	document.getElementById("Frame22").value = "";
+	document.getElementById("Frame23").value = "";
+	document.getElementById("Frame24").value = "";
+	document.getElementById("Frame25").value = "";
+	document.getElementById("Frame26").value = "";
+}
+function reloadLast(){
+	document.getElementById("Frame1").value = F1;
+	document.getElementById("Frame2").value = F2;
+	document.getElementById("Frame3").value = F3;
+	document.getElementById("Frame4").value = F4;
+	document.getElementById("Frame5").value = F5;
+	document.getElementById("Frame6").value = F6;
+	document.getElementById("Frame7").value = F7;
+	document.getElementById("Frame8").value = F8;
+	myFunction();
+}
+function clearAll(){
+	clearHTML();
+	clearInput();
+}
+</script>
+<!-- Footer -->
+<footer class="page-footer font-m blue fixed-bottom">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+  ver: DTC_v10 Updated: 01/26/2023
+  <br>© 2022 Copyright: Xos Inc.
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+</html>
